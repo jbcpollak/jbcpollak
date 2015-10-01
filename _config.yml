@@ -4,7 +4,7 @@
 
 # Site
 title: jbcpollak
-subtitle: 
+subtitle:
 description: Assorted Code
 author: Joshua Chaitin-Pollak
 language: en
@@ -63,10 +63,17 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
+plugins:
+  - hexo-tag-flickr
+
 theme: landscape
+
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
   repo: https://jbcpollak@github.com/jbcpollak/jbcpollak.github.io.git
+
+
+flickr_api_key: 5c8f3a3fdc34bf6879e191059e656f37
