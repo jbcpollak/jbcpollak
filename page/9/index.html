@@ -1,12 +1,19 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    
 <head>
-  <meta charset="utf-8">
-  
-  <title>jbcpollak</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Assorted Code">
-<meta property="og:type" content="website">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="jbcpollak">
+    <title>jbcpollak</title>
+    <meta name="author" content="Joshua Chaitin-Pollak">
+    
+    
+        <link rel="alternative" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="Assorted Code">
+<meta property="og:type" content="blog">
 <meta property="og:title" content="jbcpollak">
 <meta property="og:url" content="http://code.joshpollak.com/page/9/index.html">
 <meta property="og:site_name" content="jbcpollak">
@@ -14,684 +21,705 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jbcpollak">
 <meta name="twitter:description" content="Assorted Code">
-  
-    <link rel="alternative" href="/atom.xml" title="jbcpollak" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
-  
-
+    
+    
+    
+        <meta property="og:image" content="http://www.gravatar.com/avatar/dece77c3e23e33168616cc5a6a955be8?s=640"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style.min.css" type="text/css">
+    <!--STYLES END-->
+    
 </head>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">jbcpollak</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://code.joshpollak.com"></form>
-      </div>
-    </div>
-  </div>
+
+    <body>
+        <div id="blog">
+            <header id="header" data-behavior="1">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <h1 class="header-title">
+        <a class="header-title-link" href="/ ">jbcpollak</a>
+    </h1>
+    
+        <a class="header-right-picture" href="/#about">
+            <img class="header-picture" src="http://www.gravatar.com/avatar/dece77c3e23e33168616cc5a6a955be8?s=90"/>
+        </a>
+    
 </header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-using-maven-with-eclipse" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2007/09/05/using-maven-with-eclipse/" class="article-date">
-  <time datetime="2007-09-05T19:22:24.000Z" itemprop="datePublished">2007-09-05</time>
-</a>
+            <nav id="sidebar" data-behavior="1">
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Tech/">Tech</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
+        <div class="sidebar-profile">
+            <a href="/#about">
+                
+                    <img class="sidebar-profile-picture" src="http://www.gravatar.com/avatar/dece77c3e23e33168616cc5a6a955be8?s=90"/>
+                
+            </a>
+            <span class="sidebar-profile-name">Joshua Chaitin-Pollak</span>
+        </div>
     
     
-      <header class="article-header">
+        <ul class="sidebar-buttons">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2007/09/05/using-maven-with-eclipse/">Using Maven with Eclipse</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>I uninstalled “M2Eclipse”:<a href="http://m2eclipse.codehaus.org/" target="_blank" rel="external">http://m2eclipse.codehaus.org/</a> and installed “q4e”:<a href="http://code.google.com/p/q4e/" target="_blank" rel="external">http://code.google.com/p/q4e/</a> and gave it a shot. All the core functionality seems to be there (dependancy management is the big one for me) and importing from a project pom seems to work (although It didn’t seem to import a multilayer project, I had to import each module separately, but thats ok for me).</p>
-<p>Its nice to add dependancies manually, although I’d like to see a dependancy search page like m2eclipse has and a place to cut and paste dependancy XML chunks (I use mvnrepository.com a lot). The dependancy graph is a nice feature although the controls on the side seem a bit buggy.</p>
-<p>A pom view somewhat like the built in Ant view would be nice, where I can double click a phase or a plugin:goal and run it, although I understand it might make sense to be able to manually which goals / phases appear in the workspace.</p>
-<p>So far so good, I hope the m2eclipse and q4eclipse projects can work together in the future.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://code.joshpollak.com/2007/09/05/using-maven-with-eclipse/" data-id="cif8l1bm3000v1glntn13nm4m" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/devlopment/">devlopment</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/eclipse/">eclipse</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-parting-out-my-corrado" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2007/08/30/parting-out-my-corrado/" class="article-date">
-  <time datetime="2007-08-31T00:19:34.000Z" itemprop="datePublished">2007-08-30</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Auto/">Auto</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+                    <span class="sidebar-button-desc">Home</span>
+                </a>
+        </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2007/08/30/parting-out-my-corrado/">Parting out My Corrado</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>Update: My Corrado is now gone, off to a new home. I don’t have many Corrado specific parts left. Sorry, and thanks for the interest!</strong></p>
-<p>I’m sorry to say, but I’ve got to throw in the towel. I’ve spent to<br>much money and time on my Corrado and could never get it running, and<br>its distracted me from my real toy, my Saab Sonett. I loved the<br>Corrado when I could drive it, but its just too much now to work on.</p>
-<p>I’ve put ads up on the “VW Vortex”:<a href="http://forums.vwvortex.com/zerothread?id=3419940" target="_blank" rel="external">http://forums.vwvortex.com/zerothread?id=3419940</a>,<br>“Bay State Dubs”:<a href="http://forums.baystatedubs.com/viewtopic.php?t=518" target="_blank" rel="external">http://forums.baystatedubs.com/viewtopic.php?t=518</a> and “Maine Vw Scene”:<a href="http://www.mainevwscene.com/forum/viewtopic.php?t=15237" target="_blank" rel="external">http://www.mainevwscene.com/forum/viewtopic.php?t=15237</a></p>
-<p>Its basically a complete ‘91 G60 Corrado with a 2.0 liter 9A block<br>turbo engine swapped in. I have the full interior including both a B3<br>glass sun roof, manual seat belts from Germany (including all the<br>trim pieces), as well as the original sunroof and belts.</p>
-<p>If you’d like anything, please let me know, I’ll take best and first<br>offers. On interior OEM stuff, I’ll be very reasonable. On the go<br>fast parts, well, I know what I spent on them, and I know how little<br>they are used, so please be reasonable.</p>
-<p>For pictures, “check here”:<a href="http://www.offthehill.org/galleries/Corrado/For%20Sale/index.html" target="_blank" rel="external">http://www.offthehill.org/galleries/Corrado/For%20Sale/index.html</a>, interior pictures are on “page 2”:<a href="http://www.offthehill.org/galleries/Corrado/For%20Sale/index2.html" target="_blank" rel="external">http://www.offthehill.org/galleries/Corrado/For%20Sale/index2.html</a>.</p>
-<ul>
-<li>16 valve 9A Block Turbo</li>
-<li>Garrett T25 Disco Potato Turbo (water cooled, less than 500 miles on it, always treated well) I have the receipt for this where I paid over $1200, reasonable offers please!)</li>
-<li>Near-Equal length exhaust manifold, custom, stainless steel (I’ll pull it for picts if you are really interested) Cost $500.</li>
-<li>Glass Sunroof recently cleaned and greased</li>
-<li><p>Manual Seatbelts from Germany, including all trim peices.</p>
-</li>
-<li><p>Spearco FMIC</p>
-</li>
-<li>Eurospeed intake manifold</li>
-<li><p>2.5 TT/Custom exhaust, including custom downpipe for T25 turbo</p>
-</li>
-<li><p>New Silicone hoses</p>
-</li>
-<li>Stainless Steel Piping</li>
-<li>OBD1 vr6 TB</li>
-<li><p>350cc injectors</p>
-</li>
-<li><p>Aeromotive FPR</p>
-</li>
-<li>83 mm JE pistons</li>
-<li>polished crank</li>
-<li>port polish head</li>
-<li>new lifter, valve springs</li>
-<li>Peloquin LSD</li>
-<li>3 puck cluch vr6 PP</li>
-</ul>
-<p>Also available:</p>
-<ul>
-<li>Neuspeed racing springs not installed in the car (I don’t think<br>they were ever installed)</li>
-<li>Brand new Eurospeed rear brace</li>
-<li>Neuspeed front strut tower brace (but without mounting hardware).</li>
-<li>Garrett T3/T4 Turbo .57cold, .48 hot</li>
-<li>‘standard’ log-style turbo manifold with a T3 flange.</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://code.joshpollak.com/2007/08/30/parting-out-my-corrado/" data-id="cif8l1bp700631glni966f9zg" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/16-valve/">16 valve</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/car/">car</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/corrado/">corrado</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/for-sale/">for sale</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/turbo/">turbo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/volkswagen/">volkswagen</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vw/">vw</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-electric-pusher-trailers" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2007/08/01/electric-pusher-trailers/" class="article-date">
-  <time datetime="2007-08-02T02:55:34.000Z" itemprop="datePublished">2007-08-01</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Auto/">Auto</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/categories"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+                    <span class="sidebar-button-desc">Categories</span>
+                </a>
+        </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2007/08/01/electric-pusher-trailers/">Electric Pusher Trailers</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Some co-workers brought up the idea of creating an electric pusher-trailer to take the load off a gas-powered car… you know, incase you wanted a hybrid but couldn’t afford a Prius… or maybe you just can’t give up your Ferrari, but the gas bills are starting to get to you.</p>
-<p>Anyway, I was curious if anyone else had ever thought of this, so I did some digging. It turns out no one has ever built an electric pusher, but the concept of pushing a car with a trailer is “nothing new”:<a href="http://en.wikipedia.org/wiki/Pusher_trailer" target="_blank" rel="external">http://en.wikipedia.org/wiki/Pusher_trailer</a> , except that usually its an electric car being pushed by a gas trailer.</p>
-<p>“Here”:<a href="http://www.mrsharkey.com/pusher.htm" target="_blank" rel="external">http://www.mrsharkey.com/pusher.htm</a> are a few “examples”:<a href="http://www.jstraubel.com/EVpusher/EVpusher2.htm" target="_blank" rel="external">http://www.jstraubel.com/EVpusher/EVpusher2.htm</a> .</p>
-<p>I did “find”:<a href="http://www.electric-bikes.com/bidwell.htm" target="_blank" rel="external">http://www.electric-bikes.com/bidwell.htm</a> two electric pusher “trailers”:<a href="http://www.geocities.com/vancyclist/PT50.html" target="_blank" rel="external">http://www.geocities.com/vancyclist/PT50.html</a> for bicycles however.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://code.joshpollak.com/2007/08/01/electric-pusher-trailers/" data-id="cif8l1bvx00g71glnvei9k2jj" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cars/">cars</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/electric-vehicle/">electric vehicle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ev/">ev</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-mdnsresponder-gcc-4-1-ubuntu-problem-persists" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2007/05/04/mdnsresponder-gcc-4-1-ubuntu-problem-persists/" class="article-date">
-  <time datetime="2007-05-04T18:52:08.000Z" itemprop="datePublished">2007-05-04</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Tech/">Tech</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/tags"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+                    <span class="sidebar-button-desc">Tags</span>
+                </a>
+        </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2007/05/04/mdnsresponder-gcc-4-1-ubuntu-problem-persists/">mDNSResponder / GCC 4.1 / Ubuntu Problem persists</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>A “while back”:<a href="http://www.offthehill.org/articles/2007/01/23/mdnsresponder-and-gcc-4-1-compiling-issues" target="_blank" rel="external">http://www.offthehill.org/articles/2007/01/23/mdnsresponder-and-gcc-4-1-compiling-issues</a><br>I reported on an obscure problem when compiling applications against the dnssd library that comes with Apple’s mDNSResponder.</p>
-<p>This post is just to report that these problems persist in mDNSResponder 108.4. As I reported before, here is what you’ll see when compiling your program:</p>
-<p><code>hidden symbol</code>__stack_chk_fail_local’<br>in /usr/lib/libc_nonshared.a(stack_chk_fail_local.oS) is referenced by DSO<br>/usr/bin/ld: final link failed: Nonrepresentable section on output<br>`</p>
-<p>As you can see, its all very intuitive.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://code.joshpollak.com/2007/05/04/mdnsresponder-gcc-4-1-ubuntu-problem-persists/" data-id="cif8l1brj009g1glnnmzvabah" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bonjour/">bonjour</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/compiler/">compiler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gcc/">gcc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/mdnsresponder/">mdnsresponder</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/zeroconf/">zeroconf</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-blister-in-the-sun" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2007/03/26/blister-in-the-sun/" class="article-date">
-  <time datetime="2007-03-27T01:02:56.000Z" itemprop="datePublished">2007-03-26</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Everything-Else/">Everything Else</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-archives"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+                    <span class="sidebar-button-desc">Archive</span>
+                </a>
+        </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2007/03/26/blister-in-the-sun/">Blister in the Sun</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>You know there is something wrong with the world when you start hearing Violent Femmes songs about masturbation in the background of Wendy’s commercials. Or maybe I’m just getting old.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://code.joshpollak.com/2007/03/26/blister-in-the-sun/" data-id="cif8l1bwq00ha1gln9htb9385" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/getting-older/">getting older</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/">music</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/violent-femmes/">violent femmes</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-sticking-it-to-the-cable-company" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2007/03/13/sticking-it-to-the-cable-company/" class="article-date">
-  <time datetime="2007-03-13T16:38:34.000Z" itemprop="datePublished">2007-03-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Tech/">Tech</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="/#search"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-search"></i>
+                    <span class="sidebar-button-desc">Search</span>
+                </a>
+        </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2007/03/13/sticking-it-to-the-cable-company/">Sticking it to the Cable Company</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>We recently returned our rented cable modem and cable box (neither of which we wanted anyway, we have our own cable modem) and downgraded out TV service to ‘basic’, which is pretty much the old 2 through 13 of yester-year. Combined with the cable modem charge of $60/month, or total monthly bill should be around $75.</p>
-<p><em>But we can’t watch BattleStar Galactica!</em></p>
-<p>What to do?</p>
-<p><em>Step one: BitTorrent plus RSS</em></p>
-<p>I’m using “Azureus”:<a href="http://azureus.sourceforge.net/" target="_blank" rel="external">http://azureus.sourceforge.net/</a> and one of its RSS plugins, but Windows users might want to try uTorrent. Setting this up is well documented on the internet, so I’ll let you figure it out. Oh, “<a href="http://tvrss.net/&quot;:http://tvrss.net/" target="_blank" rel="external">http://tvrss.net/&quot;:http://tvrss.net/</a> will be helpful. I’m using the legacy RSS feeds, but I’m not sure if it matters.</p>
-<p><em>Step two: “Tivo.NET”:<a href="http://www.satellite-of-love.org/Default.aspx?Page=TiVoDotNet" target="_blank" rel="external">http://www.satellite-of-love.org/Default.aspx?Page=TiVoDotNet</a></em></p>
-<p>This tool is fantastic. Point it at the directory of your downloaded videos, and it will seemlessly transcode and send them <em>back</em> to your TiVo using “ffmpeg”:<a href="http://www.offthehill.org/articles/2007/02/17/encoding-psp-video-on-ubuntu-6-10-edgy-linux-part-1\" target="_blank" rel="external">http://www.offthehill.org/articles/2007/02/17/encoding-psp-video-on-ubuntu-6-10-edgy-linux-part-1\</a>. It runs in the background as a service or a daemon, and it provides a web page for management. I can’t imagine a better tool.</p>
-<p>If you are on Windows, download the MSI installer, if you are on Linux, download the TivoMono zip file. Here are some getting started tips.</p>
-<ul>
-<li><p>If you are using the zip file, create a directory before you extract it:</p>
-<p>  mkdir Tivomono<code>`cd Tivomono</code><br>  `unzip ../Tivomono*</p>
-</li>
-<li><p>When you are editing the ‘settings.xml’ file for the first time, make sure you put a trailing slash after the install directory, TiVoMono gets confused otherwise:</p>
-</li>
-</ul>
-<p><code>&lt;installpath&gt;/home/user/Tivomono/&lt;/installpath&gt;</code></p>
-<ul>
-<li>Start the server with –verbose:</li>
-</ul>
-<p><code>mono TivoMono.exe --verbose</code></p>
-<ul>
-<li>The admin page is here:</li>
-</ul>
-<p><code>http://localhost:9033</code></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://code.joshpollak.com/2007/03/13/sticking-it-to-the-cable-company/" data-id="cif8l1bna002j1glnbxx796dw" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/azureus/">azureus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bittorrent/">bittorrent</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rss/">rss</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/tivo/">tivo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-home-improvement-washer-and-dryer-install" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2007/03/03/home-improvement-washer-and-dryer-install/" class="article-date">
-  <time datetime="2007-03-03T20:49:13.000Z" itemprop="datePublished">2007-03-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Home/">Home</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/#about"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+                    <span class="sidebar-button-desc">About</span>
+                </a>
+        </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2007/03/03/home-improvement-washer-and-dryer-install/">Home improvement: Washer and Dryer Install</a>
-    </h1>
-  
-
-      </header>
+    </ul>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>We got a new washer and dryer today. The delivery was pretty straight forward, but it took the plumber about 5 hours to create the drain and move the pipes and everything. That cost $450. On top of that, my wife and I built a new stand for the washer and dryer, the materials for that were about $30.</p>
-<p>“Here are some pictures of before and after…”:<a href="http://www.offthehill.org/galleries/AlbionSt/Washer%20And%20Dryer%20Install/index.html" target="_blank" rel="external">http://www.offthehill.org/galleries/AlbionSt/Washer%20And%20Dryer%20Install/index.html</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://code.joshpollak.com/2007/03/03/home-improvement-washer-and-dryer-install/" data-id="cif8l1bud00e31gln6z64bvet" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dryer/">dryer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/home-improvement/">home improvement</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/home-owning/">home owning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/washer/">washer</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-not-exactly-highbrow" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2007/02/17/not-exactly-highbrow/" class="article-date">
-  <time datetime="2007-02-17T22:50:04.000Z" itemprop="datePublished">2007-02-17</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Art/">Art</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+        <ul class="sidebar-buttons">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2007/02/17/not-exactly-highbrow/">Not Exactly Highbrow...</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>…but at least I’m drawing…</p>
-<img src="https://farm1.staticflickr.com/142/393511134_72097f0278.jpg" width="500" alt="Frylock is Angry!">
-<p>Don’t piss Frylock off.</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://code.joshpollak.com/2007/02/17/not-exactly-highbrow/" data-id="cif8l1bpl006u1glni7ws4eqv" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Art/">Art</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/aqua-teen-hunger-force/">aqua teen hunger force</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/athf/">athf</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/drawing/">drawing</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-quick-sketches" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2007/02/17/quick-sketches/" class="article-date">
-  <time datetime="2007-02-17T21:13:52.000Z" itemprop="datePublished">2007-02-17</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Art/">Art</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://github.com/jbcpollak" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+                    <span class="sidebar-button-desc">GitHub</span>
+                </a>
+        </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2007/02/17/quick-sketches/">Quick Sketches</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Here are a few quick sketches I did a while back…</p>
-<p>A camera…<br><img src="https://farm1.staticflickr.com/158/393429929_ffee36bb4d.jpg" width="500" alt="A Camera"></p>
-<p>My parent’s dog Sydney</p>
-<img src="https://farm1.staticflickr.com/166/393429932_34f4ed0e44.jpg" width="500" alt="Sydney Sleeping">
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://code.joshpollak.com/2007/02/17/quick-sketches/" data-id="cif8l1bp4005x1gln2xis5esi" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Art/">Art</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/camera/">camera</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/drawing/">drawing</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sydney/">sydney</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-encoding-psp-video-on-ubuntu-6-10-edgy-linux-2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2007/02/17/encoding-psp-video-on-ubuntu-6-10-edgy-linux-2/" class="article-date">
-  <time datetime="2007-02-17T20:02:34.000Z" itemprop="datePublished">2007-02-17</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Tech/">Tech</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://www.linkedin.com/in/joshuapollak" target="_blank">
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
+                    <span class="sidebar-button-desc">Linked In</span>
+                </a>
+        </li>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2007/02/17/encoding-psp-video-on-ubuntu-6-10-edgy-linux-2/">Tivo Video on your PSP with Linux</a>
-    </h1>
-  
-
-      </header>
+    </ul>
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Tivos are great for recording video at home and Sony PSPs are great for watching video away from home. But how do you take you Tivo videos on the road with you? This guide will show you how.</p>
-<p>h3. Required Software</p>
-<p>First you’ll need to get “ffmpeg installed correctly”:<a href="http://www.offthehill.org/articles/2007/02/17/encoding-psp-video-on-ubuntu-6-10-edgy-linux-part-1" target="_blank" rel="external">http://www.offthehill.org/articles/2007/02/17/encoding-psp-video-on-ubuntu-6-10-edgy-linux-part-1</a>, before you can start encoding video for you PSP or iPod.</p>
-<p>You also need “tivodecode”:<a href="http://tivodecode.sourceforge.net/" target="_blank" rel="external">http://tivodecode.sourceforge.net/</a>. This is a simple little tool that will strip the tivo encryption from your .tivo files. I recommend you put it in ~/bin, but anywhere you like is fine. You’ll need to adjust my script (later down) if you put it somewhere else.</p>
-<p>h3. Helper Scripts</p>
-<p>I’ve written two scripts which this guide uses: “pspenc”:<a href="http://www.offthehill.org/files/pspenc" target="_blank" rel="external">http://www.offthehill.org/files/pspenc</a> and “tivo2psp”:<a href="http://www.offthehill.org/files/tivo2psp" target="_blank" rel="external">http://www.offthehill.org/files/tivo2psp</a>. pspenc will take any file ffmpeg understands and convert it into a format playable on your PSP. tivo2psp goes one step farther by downloading a file straight from the tivo and sending it to pspenc.</p>
-<p>Download both files and put them in ~/bin/, or wherever you put tivodecode. Make sure wherever you put them is on your $PATH.</p>
-<p>h3. MAK daddy</p>
-<p>Now you’ll need to find your Tivo’s MAK (meda access key).</p>
-<p>Go to your TiVo box and go to TiVo Central. From TiVo Central choose Messages &amp; Settings to open the Messages &amp; Settings menu on your TV screen. Next, choose Account &amp; System Information to open the Account &amp; System Information menu on your TV screen. Choose Media Access Key to view your Media Access Key.</p>
-<p>Put the MAK into ~/.tivodecode_mak:</p>
-<p>  cat XXXXXXXXX &gt; ~/.tivodecode_mak</p>
-<p>Doing this is easier than setting your mak each time you run tivodecode, but if you have multiple Tivos, this might not work for you.</p>
-<p>h3. Getting the videos off the TiVo</p>
-<p>Unfortunately, I haven’t found a good solution to this. If you are on Windows, you can use Tivo Desktop and if you are on a Mac, you can use “tdm”:<a href="http://tdm.sourceforge.net/" target="_blank" rel="external">http://tdm.sourceforge.net/</a>. If you are using Linux, you currently have to do it the hardway. There is also “Galleon”:<a href="http://galleon.tv" target="_blank" rel="external">http://galleon.tv</a>, but I find it clunky to use and it seems to be a dead project now.</p>
-<p>I’m using a combination of my web browser and curl (through my tivo2psp script) to access Tivo’s built in webserver to download the files directly. All you need to do is browse to https://<your-tivos-ip-address>/ and log in with the username tivo and your MAK as the password.</your-tivos-ip-address></p>
-<p>From there, find the show you want to watch, and right click. Choose ‘copy link location’ to copy the URL to the clipboard.</p>
-<p>h3. Running The Conversion</p>
-<p>This is the last, and possibly the easiest step. Open up your terminal window and type “tivo2psp <url>“ where <url> is the pasted url you just copied. Press enter, and the script should do it thing. Sit back and wait, and in an hour you should have a video file for your psp. You’ll want to rename it, unfortunately the Tivo doesn’t provide sensible filenames for your downloads.</url></url></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://code.joshpollak.com/2007/02/17/encoding-psp-video-on-ubuntu-6-10-edgy-linux-2/" data-id="cif8l1bvo00fs1gln1aj5gd1l" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-  
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/8/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/10/">Next &raquo;</a>
-    </nav>
-  
-</section>
+        <ul class="sidebar-buttons">
         
-          <aside id="sidebar">
-  
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
+                    <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+                    <span class="sidebar-button-desc">RSS</span>
+                </a>
+        </li>
+        
+    </ul>
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Art/">Art</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Auto/">Auto</a><span class="category-list-count">19</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Cats/">Cats</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/China/">China</a><span class="category-list-count">9</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Everything-Else/">Everything Else</a><span class="category-list-count">13</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Home/">Home</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Politics/">Politics</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tech/">Tech</a><span class="category-list-count">59</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Travel/">Travel</a><span class="category-list-count">7</span></li></ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/16-valve/">16 valve</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/2008/">2008</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/222-UL/">222-UL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/64bit/">64bit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Art/">Art</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bill-O-Reilly/">Bill O'Reilly</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/BusySync/">BusySync</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Content-Encoding/">Content-Encoding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Corrado/">Corrado</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FIA-GT1/">FIA GT1</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google-Plus/">Google Plus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hacked/">Hacked</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Karl-Rove/">Karl Rove</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Leopard/">Leopard</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mick-Mountz/">Mick Mountz</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Motorsports/">Motorsports</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/OS-X/">OS X</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PHP/">PHP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Politics/">Politics</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Racing/">Racing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Rich-Snippets/">Rich Snippets</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SAAB/">SAAB</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Saab/">Saab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sailing/">Sailing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Sonett/">Sonett</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SyncMate/">SyncMate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Travel/">Travel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UL-222/">UL-222</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Validator/">Validator</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/a/">a*</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/a-star/">a-star</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/account-expiration/">account expiration</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/adbweather-plus/">adbweather plus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/address-book/">address book</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/airplane/">airplane</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/alberta/">alberta</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/android/">android</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aperture/">aperture</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apimportgroup/">apimportgroup</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apple/">apple</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/approject/">approject</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/aqua-teen-hunger-force/">aqua teen hunger force</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/arcade/">arcade</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/arcade-cabinet/">arcade cabinet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/astar/">astar</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/astar-in-clojure/">astar-in-clojure</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/athf/">athf</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/autocross/">autocross</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/automation/">automation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/azureus/">azureus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/backpack/">backpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/backspace/">backspace</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/backup/">backup</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/banff/">banff</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bears/">bears</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beijing/">beijing</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beta/">beta</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bikes/">bikes</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bittorrent/">bittorrent</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blogroll/">blogroll</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blogs/">blogs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bmwcca/">bmwcca</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bonjour/">bonjour</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/books/">books</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/brakes/">brakes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bsd/">bsd</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/buffalo/">buffalo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bumblebee/">bumblebee</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/busymac/">busymac</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cab/">cab</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/calendar/">calendar</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/camera/">camera</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/camera-bag/">camera bag</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canada/">canada</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/car/">car</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/car-maintenance/">car maintenance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/car-repair/">car repair</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cars/">cars</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cat/">cat</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/china/">china</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clean/">clean</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clip/">clip</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/clojure/">clojure</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/">code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/collections/">collections</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/compile/">compile</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/compiler/">compiler</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/contacts/">contacts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cornell/">cornell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/corrado/">corrado</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cory-doctorow/">cory doctorow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cultural-sensitivity/">cultural sensitivity</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/daily-show/">daily show</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dance/">dance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/database/">database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/delete/">delete</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devlopment/">devlopment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/distribution-center/">distribution center</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dmv/">dmv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dns-service-discovery/">dns service discovery</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dns-sd/">dns-sd</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dong/">dong</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/doomed/">doomed</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/drawing/">drawing</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dreamhost/">dreamhost</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dryer/">dryer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/e-mail/">e-mail</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/eclipse/">eclipse</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/egress/">egress</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/election/">election</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/electric-vehicle/">electric vehicle</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/eltima/">eltima</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/email/">email</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/erase/">erase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ev/">ev</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/example/">example</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/exchange/">exchange</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/expiration/">expiration</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fake-electronics/">fake electronics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fear/">fear</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/film/">film</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/final/">final</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flickr/">flickr</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fonts/">fonts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/food/">food</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/for-sale/">for sale</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/format/">format</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/forum/">forum</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/framework/">framework</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/free-space/">free space</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/freeze/">freeze</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fullfillment/">fullfillment</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/functional-programming/">functional programming</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/fuse/">fuse</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/g1/">g1</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gamertag/">gamertag</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gaming/">gaming</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gcc/">gcc</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gentoo/">gentoo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/getting-older/">getting older</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/global-warming/">global warming</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gmail/">gmail</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/google/">google</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/google-calendar/">google calendar</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/government/">government</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hard-dog/">hard dog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/harmony/">harmony</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hell/">hell</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hiking/">hiking</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hitachi/">hitachi</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/home-improvement/">home improvement</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/home-owning/">home owning</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/htc-wing/">htc wing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hypocrisy/">hypocrisy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iCal/">iCal</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ice-racing/">ice racing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/idle/">idle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ilife/">ilife</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/imap/">imap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/install/">install</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iphone/">iphone</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ithaca/">ithaca</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/j2ee/">j2ee</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jerks/">jerks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jmdns/">jmdns</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jogl/">jogl</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kata/">kata</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/keychain/">keychain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kitten/">kitten</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kiva/">kiva</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kiva-systems/">kiva systems</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ldap/">ldap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/le-pichet/">le pichet</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/legacy/">legacy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leo/">leo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/less/">less</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/library/">library</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lies/">lies</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/links/">links</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lion/">lion</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/little-brother/">little brother</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/live-id/">live id</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/logitech/">logitech</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/london/">london</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lotus/">lotus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macfuse/">macfuse</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macports/">macports</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mail/">mail</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mail-app/">mail.app</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mame/">mame</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/map/">map</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/massachusetts/">massachusetts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/maven/">maven</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mccain/">mccain</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mdns/">mdns</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mdnsresponder/">mdnsresponder</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/media-center/">media center</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/metadata/">metadata</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/miata/">miata</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/microsoft/">microsoft</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/midi/">midi</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/migration/">migration</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/missing-sync/">missing sync</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mock/">mock</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/motorcycle/">motorcycle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/motorsports/">motorsports</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mozy/">mozy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mp3/">mp3</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/music/">music</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mutable/">mutable</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nhis/">nhis</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/notes/">notes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/novel/">novel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/novels/">novels</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nutcracker/">nutcracker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/obama/">obama</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/office/">office</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/online-backup/">online backup</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/osx/">osx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/osxfuse/">osxfuse</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pablo/">pablo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/palin/">palin</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/partition/">partition</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/photo/">photo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/photography/">photography</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pocket-pc/">pocket pc</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/police-state/">police state</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/politics/">politics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/programming/">programming</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/racing/">racing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raid/">raid</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/raw/">raw</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/reading/">reading</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/refurbished/">refurbished</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/registration/">registration</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/repair/">repair</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/republican/">republican</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/restaurant/">restaurant</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/restoration/">restoration</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/review/">review</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rmv/">rmv</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/robotics/">robotics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/robots/">robots</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rollbar/">rollbar</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rss/">rss</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/saab/">saab</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/samsung/">samsung</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sansa/">sansa</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sarah/">sarah</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/science/">science</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/screen-saver/">screen saver</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/screensaver/">screensaver</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seacucumber/">seacucumber</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/seattle/">seattle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/shanzai/">shanzai</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slim-devices/">slim devices</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/smog/">smog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/smugmug/">smugmug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/snow-leopard/">snow leopard</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sonett/">sonett</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spanning-sync/">spanning sync</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spiders/">spiders</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring/">spring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sqlite/">sqlite</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/squeezebox/">squeezebox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/squeezecenter/">squeezecenter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/squeezeplay/">squeezeplay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh-keychain/">ssh keychain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/startup/">startup</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/static/">static</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/street-performance/">street performance</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/subversion/">subversion</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sunroof/">sunroof</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/support/">support</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sydney/">sydney</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/t-mobile-g1/">t-mobile g1</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/t-mobile-wing/">t-mobile wing</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terastation/">terastation</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terastation-live/">terastation live</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/terminal/">terminal</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/testing/">testing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/textile/">textile</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tires/">tires</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tivo/">tivo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/track-day/">track day</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/travel/">travel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tripod/">tripod</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/truecrypt/">truecrypt</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/turbo/">turbo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tuxera/">tuxera</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typo/">typo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/unix/">unix</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/upgrade/">upgrade</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/variables/">variables</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vi/">vi</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/violent-femmes/">violent femmes</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/volkswagen/">volkswagen</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vw/">vw</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/walgreens/">walgreens</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/warehouse/">warehouse</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/washer/">washer</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/website/">website</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wheels/">wheels</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows-live/">windows live</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows-mobile/">windows mobile</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wing/">wing</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/word/">word</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wordpress/">wordpress</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wrx/">wrx</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xbmc/">xbmc</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xbox-360/">xbox 360</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/xbox-live/">xbox live</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/youtube/">youtube</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zenfolio/">zenfolio</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zeroconf/">zeroconf</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/zhongguancun/">zhongguancun</a><span class="tag-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/16-valve/" style="font-size: 10px;">16 valve</a> <a href="/tags/2008/" style="font-size: 10px;">2008</a> <a href="/tags/222-UL/" style="font-size: 10px;">222-UL</a> <a href="/tags/64bit/" style="font-size: 10px;">64bit</a> <a href="/tags/Art/" style="font-size: 11px;">Art</a> <a href="/tags/Bill-O-Reilly/" style="font-size: 10px;">Bill O'Reilly</a> <a href="/tags/BusySync/" style="font-size: 10px;">BusySync</a> <a href="/tags/Content-Encoding/" style="font-size: 10px;">Content-Encoding</a> <a href="/tags/Corrado/" style="font-size: 11px;">Corrado</a> <a href="/tags/FIA-GT1/" style="font-size: 10px;">FIA GT1</a> <a href="/tags/Google-Plus/" style="font-size: 10px;">Google Plus</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/Hacked/" style="font-size: 10px;">Hacked</a> <a href="/tags/Karl-Rove/" style="font-size: 10px;">Karl Rove</a> <a href="/tags/Leopard/" style="font-size: 12px;">Leopard</a> <a href="/tags/Mick-Mountz/" style="font-size: 10px;">Mick Mountz</a> <a href="/tags/Motorsports/" style="font-size: 11px;">Motorsports</a> <a href="/tags/OS-X/" style="font-size: 19px;">OS X</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Politics/" style="font-size: 11px;">Politics</a> <a href="/tags/Racing/" style="font-size: 10px;">Racing</a> <a href="/tags/Rich-Snippets/" style="font-size: 10px;">Rich Snippets</a> <a href="/tags/SAAB/" style="font-size: 11px;">SAAB</a> <a href="/tags/Saab/" style="font-size: 10px;">Saab</a> <a href="/tags/Sailing/" style="font-size: 10px;">Sailing</a> <a href="/tags/Sonett/" style="font-size: 10px;">Sonett</a> <a href="/tags/SyncMate/" style="font-size: 10px;">SyncMate</a> <a href="/tags/Travel/" style="font-size: 10px;">Travel</a> <a href="/tags/UL-222/" style="font-size: 10px;">UL-222</a> <a href="/tags/Validator/" style="font-size: 10px;">Validator</a> <a href="/tags/a/" style="font-size: 11px;">a*</a> <a href="/tags/a-star/" style="font-size: 11px;">a-star</a> <a href="/tags/account-expiration/" style="font-size: 10px;">account expiration</a> <a href="/tags/adbweather-plus/" style="font-size: 10px;">adbweather plus</a> <a href="/tags/address-book/" style="font-size: 10px;">address book</a> <a href="/tags/airplane/" style="font-size: 10px;">airplane</a> <a href="/tags/alberta/" style="font-size: 10px;">alberta</a> <a href="/tags/android/" style="font-size: 11px;">android</a> <a href="/tags/aperture/" style="font-size: 11px;">aperture</a> <a href="/tags/apimportgroup/" style="font-size: 10px;">apimportgroup</a> <a href="/tags/apple/" style="font-size: 16px;">apple</a> <a href="/tags/approject/" style="font-size: 10px;">approject</a> <a href="/tags/aqua-teen-hunger-force/" style="font-size: 11px;">aqua teen hunger force</a> <a href="/tags/arcade/" style="font-size: 10px;">arcade</a> <a href="/tags/arcade-cabinet/" style="font-size: 10px;">arcade cabinet</a> <a href="/tags/astar/" style="font-size: 11px;">astar</a> <a href="/tags/astar-in-clojure/" style="font-size: 11px;">astar-in-clojure</a> <a href="/tags/athf/" style="font-size: 11px;">athf</a> <a href="/tags/autocross/" style="font-size: 10px;">autocross</a> <a href="/tags/automation/" style="font-size: 10px;">automation</a> <a href="/tags/azureus/" style="font-size: 10px;">azureus</a> <a href="/tags/backpack/" style="font-size: 10px;">backpack</a> <a href="/tags/backspace/" style="font-size: 10px;">backspace</a> <a href="/tags/backup/" style="font-size: 10px;">backup</a> <a href="/tags/banff/" style="font-size: 11px;">banff</a> <a href="/tags/bears/" style="font-size: 10px;">bears</a> <a href="/tags/beijing/" style="font-size: 12px;">beijing</a> <a href="/tags/beta/" style="font-size: 10px;">beta</a> <a href="/tags/bikes/" style="font-size: 11px;">bikes</a> <a href="/tags/bittorrent/" style="font-size: 10px;">bittorrent</a> <a href="/tags/blog/" style="font-size: 11px;">blog</a> <a href="/tags/blogroll/" style="font-size: 10px;">blogroll</a> <a href="/tags/blogs/" style="font-size: 10px;">blogs</a> <a href="/tags/bmwcca/" style="font-size: 12px;">bmwcca</a> <a href="/tags/bonjour/" style="font-size: 13px;">bonjour</a> <a href="/tags/books/" style="font-size: 11px;">books</a> <a href="/tags/brakes/" style="font-size: 10px;">brakes</a> <a href="/tags/bsd/" style="font-size: 10px;">bsd</a> <a href="/tags/buffalo/" style="font-size: 10px;">buffalo</a> <a href="/tags/bumblebee/" style="font-size: 10px;">bumblebee</a> <a href="/tags/busymac/" style="font-size: 10px;">busymac</a> <a href="/tags/cab/" style="font-size: 10px;">cab</a> <a href="/tags/calendar/" style="font-size: 10px;">calendar</a> <a href="/tags/camera/" style="font-size: 10px;">camera</a> <a href="/tags/camera-bag/" style="font-size: 10px;">camera bag</a> <a href="/tags/canada/" style="font-size: 10px;">canada</a> <a href="/tags/car/" style="font-size: 11px;">car</a> <a href="/tags/car-maintenance/" style="font-size: 10px;">car maintenance</a> <a href="/tags/car-repair/" style="font-size: 10px;">car repair</a> <a href="/tags/cars/" style="font-size: 14px;">cars</a> <a href="/tags/cat/" style="font-size: 11px;">cat</a> <a href="/tags/china/" style="font-size: 14px;">china</a> <a href="/tags/clean/" style="font-size: 10px;">clean</a> <a href="/tags/clip/" style="font-size: 10px;">clip</a> <a href="/tags/clojure/" style="font-size: 11px;">clojure</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/collections/" style="font-size: 10px;">collections</a> <a href="/tags/compile/" style="font-size: 10px;">compile</a> <a href="/tags/compiler/" style="font-size: 11px;">compiler</a> <a href="/tags/contacts/" style="font-size: 10px;">contacts</a> <a href="/tags/cornell/" style="font-size: 10px;">cornell</a> <a href="/tags/corrado/" style="font-size: 10px;">corrado</a> <a href="/tags/cory-doctorow/" style="font-size: 10px;">cory doctorow</a> <a href="/tags/cultural-sensitivity/" style="font-size: 10px;">cultural sensitivity</a> <a href="/tags/daily-show/" style="font-size: 10px;">daily show</a> <a href="/tags/dance/" style="font-size: 10px;">dance</a> <a href="/tags/database/" style="font-size: 10px;">database</a> <a href="/tags/delete/" style="font-size: 11px;">delete</a> <a href="/tags/devlopment/" style="font-size: 10px;">devlopment</a> <a href="/tags/distribution-center/" style="font-size: 10px;">distribution center</a> <a href="/tags/dmv/" style="font-size: 10px;">dmv</a> <a href="/tags/dns-service-discovery/" style="font-size: 11px;">dns service discovery</a> <a href="/tags/dns-sd/" style="font-size: 11px;">dns-sd</a> <a href="/tags/dong/" style="font-size: 10px;">dong</a> <a href="/tags/doomed/" style="font-size: 10px;">doomed</a> <a href="/tags/drawing/" style="font-size: 12px;">drawing</a> <a href="/tags/dreamhost/" style="font-size: 11px;">dreamhost</a> <a href="/tags/dryer/" style="font-size: 10px;">dryer</a> <a href="/tags/e-mail/" style="font-size: 10px;">e-mail</a> <a href="/tags/eclipse/" style="font-size: 11px;">eclipse</a> <a href="/tags/egress/" style="font-size: 10px;">egress</a> <a href="/tags/election/" style="font-size: 12px;">election</a> <a href="/tags/electric-vehicle/" style="font-size: 12px;">electric vehicle</a> <a href="/tags/eltima/" style="font-size: 10px;">eltima</a> <a href="/tags/email/" style="font-size: 10px;">email</a> <a href="/tags/erase/" style="font-size: 10px;">erase</a> <a href="/tags/ev/" style="font-size: 12px;">ev</a> <a href="/tags/example/" style="font-size: 10px;">example</a> <a href="/tags/exchange/" style="font-size: 10px;">exchange</a> <a href="/tags/expiration/" style="font-size: 10px;">expiration</a> <a href="/tags/fake-electronics/" style="font-size: 10px;">fake electronics</a> <a href="/tags/fear/" style="font-size: 11px;">fear</a> <a href="/tags/film/" style="font-size: 10px;">film</a> <a href="/tags/final/" style="font-size: 10px;">final</a> <a href="/tags/flickr/" style="font-size: 11px;">flickr</a> <a href="/tags/fonts/" style="font-size: 10px;">fonts</a> <a href="/tags/food/" style="font-size: 11px;">food</a> <a href="/tags/for-sale/" style="font-size: 10px;">for sale</a> <a href="/tags/format/" style="font-size: 10px;">format</a> <a href="/tags/forum/" style="font-size: 10px;">forum</a> <a href="/tags/framework/" style="font-size: 10px;">framework</a> <a href="/tags/free-space/" style="font-size: 10px;">free space</a> <a href="/tags/freeze/" style="font-size: 10px;">freeze</a> <a href="/tags/fullfillment/" style="font-size: 10px;">fullfillment</a> <a href="/tags/functional-programming/" style="font-size: 10px;">functional programming</a> <a href="/tags/fuse/" style="font-size: 10px;">fuse</a> <a href="/tags/g1/" style="font-size: 10px;">g1</a> <a href="/tags/gamertag/" style="font-size: 13px;">gamertag</a> <a href="/tags/gaming/" style="font-size: 15px;">gaming</a> <a href="/tags/gcc/" style="font-size: 11px;">gcc</a> <a href="/tags/gentoo/" style="font-size: 10px;">gentoo</a> <a href="/tags/getting-older/" style="font-size: 10px;">getting older</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/github/" style="font-size: 10px;">github</a> <a href="/tags/global-warming/" style="font-size: 10px;">global warming</a> <a href="/tags/gmail/" style="font-size: 10px;">gmail</a> <a href="/tags/google/" style="font-size: 12px;">google</a> <a href="/tags/google-calendar/" style="font-size: 10px;">google calendar</a> <a href="/tags/government/" style="font-size: 10px;">government</a> <a href="/tags/hard-dog/" style="font-size: 10px;">hard dog</a> <a href="/tags/harmony/" style="font-size: 10px;">harmony</a> <a href="/tags/hell/" style="font-size: 10px;">hell</a> <a href="/tags/hiking/" style="font-size: 10px;">hiking</a> <a href="/tags/hitachi/" style="font-size: 10px;">hitachi</a> <a href="/tags/home-improvement/" style="font-size: 10px;">home improvement</a> <a href="/tags/home-owning/" style="font-size: 10px;">home owning</a> <a href="/tags/htc-wing/" style="font-size: 10px;">htc wing</a> <a href="/tags/hypocrisy/" style="font-size: 10px;">hypocrisy</a> <a href="/tags/iCal/" style="font-size: 11px;">iCal</a> <a href="/tags/ice-racing/" style="font-size: 10px;">ice racing</a> <a href="/tags/idle/" style="font-size: 10px;">idle</a> <a href="/tags/ilife/" style="font-size: 10px;">ilife</a> <a href="/tags/imap/" style="font-size: 10px;">imap</a> <a href="/tags/install/" style="font-size: 10px;">install</a> <a href="/tags/iphone/" style="font-size: 10px;">iphone</a> <a href="/tags/iterm/" style="font-size: 11px;">iterm</a> <a href="/tags/ithaca/" style="font-size: 10px;">ithaca</a> <a href="/tags/j2ee/" style="font-size: 10px;">j2ee</a> <a href="/tags/java/" style="font-size: 17px;">java</a> <a href="/tags/jerks/" style="font-size: 10px;">jerks</a> <a href="/tags/jmdns/" style="font-size: 11px;">jmdns</a> <a href="/tags/jogl/" style="font-size: 10px;">jogl</a> <a href="/tags/kata/" style="font-size: 10px;">kata</a> <a href="/tags/keychain/" style="font-size: 10px;">keychain</a> <a href="/tags/kitten/" style="font-size: 11px;">kitten</a> <a href="/tags/kiva/" style="font-size: 10px;">kiva</a> <a href="/tags/kiva-systems/" style="font-size: 11px;">kiva systems</a> <a href="/tags/ldap/" style="font-size: 10px;">ldap</a> <a href="/tags/le-pichet/" style="font-size: 10px;">le pichet</a> <a href="/tags/legacy/" style="font-size: 10px;">legacy</a> <a href="/tags/leo/" style="font-size: 10px;">leo</a> <a href="/tags/less/" style="font-size: 10px;">less</a> <a href="/tags/library/" style="font-size: 10px;">library</a> <a href="/tags/lies/" style="font-size: 10px;">lies</a> <a href="/tags/links/" style="font-size: 10px;">links</a> <a href="/tags/linux/" style="font-size: 17px;">linux</a> <a href="/tags/lion/" style="font-size: 10px;">lion</a> <a href="/tags/little-brother/" style="font-size: 10px;">little brother</a> <a href="/tags/live-id/" style="font-size: 11px;">live id</a> <a href="/tags/logitech/" style="font-size: 10px;">logitech</a> <a href="/tags/london/" style="font-size: 10px;">london</a> <a href="/tags/lotus/" style="font-size: 10px;">lotus</a> <a href="/tags/mac/" style="font-size: 20px;">mac</a> <a href="/tags/macfuse/" style="font-size: 11px;">macfuse</a> <a href="/tags/macports/" style="font-size: 10px;">macports</a> <a href="/tags/mail/" style="font-size: 11px;">mail</a> <a href="/tags/mail-app/" style="font-size: 10px;">mail.app</a> <a href="/tags/mame/" style="font-size: 10px;">mame</a> <a href="/tags/map/" style="font-size: 10px;">map</a> <a href="/tags/massachusetts/" style="font-size: 10px;">massachusetts</a> <a href="/tags/maven/" style="font-size: 13px;">maven</a> <a href="/tags/mccain/" style="font-size: 11px;">mccain</a> <a href="/tags/mdns/" style="font-size: 11px;">mdns</a> <a href="/tags/mdnsresponder/" style="font-size: 13px;">mdnsresponder</a> <a href="/tags/media-center/" style="font-size: 10px;">media center</a> <a href="/tags/metadata/" style="font-size: 10px;">metadata</a> <a href="/tags/miata/" style="font-size: 11px;">miata</a> <a href="/tags/microsoft/" style="font-size: 12px;">microsoft</a> <a href="/tags/midi/" style="font-size: 10px;">midi</a> <a href="/tags/migration/" style="font-size: 15px;">migration</a> <a href="/tags/missing-sync/" style="font-size: 10px;">missing sync</a> <a href="/tags/mock/" style="font-size: 10px;">mock</a> <a href="/tags/motorcycle/" style="font-size: 10px;">motorcycle</a> <a href="/tags/motorsports/" style="font-size: 10px;">motorsports</a> <a href="/tags/mozy/" style="font-size: 10px;">mozy</a> <a href="/tags/mp3/" style="font-size: 10px;">mp3</a> <a href="/tags/music/" style="font-size: 12px;">music</a> <a href="/tags/mutable/" style="font-size: 10px;">mutable</a> <a href="/tags/nhis/" style="font-size: 11px;">nhis</a> <a href="/tags/notes/" style="font-size: 10px;">notes</a> <a href="/tags/novel/" style="font-size: 10px;">novel</a> <a href="/tags/novels/" style="font-size: 10px;">novels</a> <a href="/tags/nutcracker/" style="font-size: 10px;">nutcracker</a> <a href="/tags/obama/" style="font-size: 10px;">obama</a> <a href="/tags/office/" style="font-size: 10px;">office</a> <a href="/tags/online-backup/" style="font-size: 10px;">online backup</a> <a href="/tags/osx/" style="font-size: 10px;">osx</a> <a href="/tags/osxfuse/" style="font-size: 10px;">osxfuse</a> <a href="/tags/pablo/" style="font-size: 11px;">pablo</a> <a href="/tags/palin/" style="font-size: 12px;">palin</a> <a href="/tags/partition/" style="font-size: 10px;">partition</a> <a href="/tags/photo/" style="font-size: 10px;">photo</a> <a href="/tags/photography/" style="font-size: 14px;">photography</a> <a href="/tags/pocket-pc/" style="font-size: 14px;">pocket pc</a> <a href="/tags/police-state/" style="font-size: 10px;">police state</a> <a href="/tags/politics/" style="font-size: 10px;">politics</a> <a href="/tags/programming/" style="font-size: 10px;">programming</a> <a href="/tags/racing/" style="font-size: 10px;">racing</a> <a href="/tags/raid/" style="font-size: 10px;">raid</a> <a href="/tags/raw/" style="font-size: 10px;">raw</a> <a href="/tags/reading/" style="font-size: 11px;">reading</a> <a href="/tags/refurbished/" style="font-size: 10px;">refurbished</a> <a href="/tags/registration/" style="font-size: 10px;">registration</a> <a href="/tags/repair/" style="font-size: 10px;">repair</a> <a href="/tags/republican/" style="font-size: 10px;">republican</a> <a href="/tags/restaurant/" style="font-size: 10px;">restaurant</a> <a href="/tags/restoration/" style="font-size: 10px;">restoration</a> <a href="/tags/review/" style="font-size: 10px;">review</a> <a href="/tags/rmv/" style="font-size: 10px;">rmv</a> <a href="/tags/robotics/" style="font-size: 10px;">robotics</a> <a href="/tags/robots/" style="font-size: 11px;">robots</a> <a href="/tags/rollbar/" style="font-size: 10px;">rollbar</a> <a href="/tags/rss/" style="font-size: 11px;">rss</a> <a href="/tags/saab/" style="font-size: 11px;">saab</a> <a href="/tags/samsung/" style="font-size: 10px;">samsung</a> <a href="/tags/sansa/" style="font-size: 10px;">sansa</a> <a href="/tags/sarah/" style="font-size: 10px;">sarah</a> <a href="/tags/science/" style="font-size: 10px;">science</a> <a href="/tags/screen-saver/" style="font-size: 10px;">screen saver</a> <a href="/tags/screensaver/" style="font-size: 10px;">screensaver</a> <a href="/tags/seacucumber/" style="font-size: 10px;">seacucumber</a> <a href="/tags/seattle/" style="font-size: 10px;">seattle</a> <a href="/tags/shanzai/" style="font-size: 10px;">shanzai</a> <a href="/tags/slim-devices/" style="font-size: 10px;">slim devices</a> <a href="/tags/smog/" style="font-size: 10px;">smog</a> <a href="/tags/smugmug/" style="font-size: 10px;">smugmug</a> <a href="/tags/snow-leopard/" style="font-size: 14px;">snow leopard</a> <a href="/tags/sonett/" style="font-size: 14px;">sonett</a> <a href="/tags/spanning-sync/" style="font-size: 10px;">spanning sync</a> <a href="/tags/spiders/" style="font-size: 10px;">spiders</a> <a href="/tags/spring/" style="font-size: 10px;">spring</a> <a href="/tags/sqlite/" style="font-size: 10px;">sqlite</a> <a href="/tags/squeezebox/" style="font-size: 10px;">squeezebox</a> <a href="/tags/squeezecenter/" style="font-size: 10px;">squeezecenter</a> <a href="/tags/squeezeplay/" style="font-size: 10px;">squeezeplay</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/ssh-keychain/" style="font-size: 10px;">ssh keychain</a> <a href="/tags/startup/" style="font-size: 10px;">startup</a> <a href="/tags/static/" style="font-size: 10px;">static</a> <a href="/tags/street-performance/" style="font-size: 10px;">street performance</a> <a href="/tags/subversion/" style="font-size: 10px;">subversion</a> <a href="/tags/sunroof/" style="font-size: 10px;">sunroof</a> <a href="/tags/support/" style="font-size: 11px;">support</a> <a href="/tags/sydney/" style="font-size: 10px;">sydney</a> <a href="/tags/t-mobile-g1/" style="font-size: 11px;">t-mobile g1</a> <a href="/tags/t-mobile-wing/" style="font-size: 12px;">t-mobile wing</a> <a href="/tags/terastation/" style="font-size: 10px;">terastation</a> <a href="/tags/terastation-live/" style="font-size: 10px;">terastation live</a> <a href="/tags/terminal/" style="font-size: 12px;">terminal</a> <a href="/tags/testing/" style="font-size: 10px;">testing</a> <a href="/tags/textile/" style="font-size: 10px;">textile</a> <a href="/tags/tires/" style="font-size: 10px;">tires</a> <a href="/tags/tivo/" style="font-size: 10px;">tivo</a> <a href="/tags/track-day/" style="font-size: 11px;">track day</a> <a href="/tags/travel/" style="font-size: 10px;">travel</a> <a href="/tags/tripod/" style="font-size: 10px;">tripod</a> <a href="/tags/truecrypt/" style="font-size: 10px;">truecrypt</a> <a href="/tags/turbo/" style="font-size: 10px;">turbo</a> <a href="/tags/tuxera/" style="font-size: 10px;">tuxera</a> <a href="/tags/typo/" style="font-size: 10px;">typo</a> <a href="/tags/ubuntu/" style="font-size: 13px;">ubuntu</a> <a href="/tags/unix/" style="font-size: 10px;">unix</a> <a href="/tags/upgrade/" style="font-size: 10px;">upgrade</a> <a href="/tags/variables/" style="font-size: 10px;">variables</a> <a href="/tags/vi/" style="font-size: 10px;">vi</a> <a href="/tags/violent-femmes/" style="font-size: 10px;">violent femmes</a> <a href="/tags/volkswagen/" style="font-size: 10px;">volkswagen</a> <a href="/tags/vw/" style="font-size: 12px;">vw</a> <a href="/tags/walgreens/" style="font-size: 10px;">walgreens</a> <a href="/tags/warehouse/" style="font-size: 11px;">warehouse</a> <a href="/tags/washer/" style="font-size: 10px;">washer</a> <a href="/tags/website/" style="font-size: 10px;">website</a> <a href="/tags/wheels/" style="font-size: 10px;">wheels</a> <a href="/tags/windows-live/" style="font-size: 15px;">windows live</a> <a href="/tags/windows-mobile/" style="font-size: 16px;">windows mobile</a> <a href="/tags/wing/" style="font-size: 11px;">wing</a> <a href="/tags/word/" style="font-size: 10px;">word</a> <a href="/tags/wordpress/" style="font-size: 13px;">wordpress</a> <a href="/tags/wrx/" style="font-size: 10px;">wrx</a> <a href="/tags/xbmc/" style="font-size: 10px;">xbmc</a> <a href="/tags/xbox-360/" style="font-size: 19px;">xbox 360</a> <a href="/tags/xbox-live/" style="font-size: 18px;">xbox live</a> <a href="/tags/youtube/" style="font-size: 10px;">youtube</a> <a href="/tags/zenfolio/" style="font-size: 10px;">zenfolio</a> <a href="/tags/zeroconf/" style="font-size: 13px;">zeroconf</a> <a href="/tags/zhongguancun/" style="font-size: 10px;">zhongguancun</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/09/">September 2011</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/08/">August 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/07/">July 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/06/">June 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/03/">March 2011</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/02/">February 2011</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/12/">December 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/10/">October 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/09/">September 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/05/">May 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/02/">February 2010</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2010/01/">January 2010</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/12/">December 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/10/">October 2009</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/09/">September 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/08/">August 2009</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/07/">July 2009</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/03/">March 2009</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/02/">February 2009</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2009/01/">January 2009</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/11/">November 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/10/">October 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/09/">September 2008</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/06/">June 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/05/">May 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/03/">March 2008</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2008/01/">January 2008</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/12/">December 2007</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/11/">November 2007</a><span class="archive-list-count">11</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/10/">October 2007</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/09/">September 2007</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/08/">August 2007</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/05/">May 2007</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/03/">March 2007</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/02/">February 2007</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2007/01/">January 2007</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/12/">December 2006</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/11/">November 2006</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/10/">October 2006</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/08/">August 2006</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/07/">July 2006</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/06/">June 2006</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/04/">April 2006</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/03/">March 2006</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2006/02/">February 2006</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2011/09/15/a-fix-for-broken-google-rich-snippets-and-google-shares/">A Fix for Broken Google Rich Snippets and Google+ Shares</a>
-          </li>
-        
-          <li>
-            <a href="/2011/09/12/fia-gt1-championship-in-beijing/">Photos of the FIA GT1 Championship in Beijing</a>
-          </li>
-        
-          <li>
-            <a href="/2011/08/29/kata-bumblebee-222-ul-review/">Kata Bumblebee UL-222 Review</a>
-          </li>
-        
-          <li>
-            <a href="/2011/07/21/macfuse-for-os-x-lion/">MacFUSE for OS X Lion</a>
-          </li>
-        
-          <li>
-            <a href="/2011/06/03/java-static-variables-are-wrong-almost-always/">Java: Static Variables are WRONG (Almost Always)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2015 Joshua Chaitin-Pollak<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
 </nav>
+
+            
+            <div id="main" data-behavior="1"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<section class="postShorten-group main-content-wrap">
     
+        
+        
+                <article class="postShorten" itemscope itemType="http://schema.org/BlogPosting">
+        
+            <div class="postShorten-wrap">
+                <div class="postShorten-header">
+                    <h1 class="postShorten-title" itemprop="headline">
+                        
+                                <a class="link-unstyled" href="/2007/09/05/using-maven-with-eclipse/">Using Maven with Eclipse</a>
+                        
+                    </h1>
+                    <div class="postShorten-meta">
+    <time itemprop="datePublished" content="Wed Sep 05 2007 15:22:24 GMT-0400">
+	
+		    Sep 05, 2007
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Tech/">Tech</a>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+    
+</div>
+                </div>
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    
+                        <p>
+                            I uninstalled “M2Eclipse”:http://m2eclipse.codehaus.org/ and installed “q4e”:http://code.google.com/p/q4e/ and gave it a shot. All the core functionality seems to be there (dependancy management is th<br>
+                    
+                    
+                        
+                            <a href="/2007/09/05/using-maven-with-eclipse/" class="postShorten-excerpt_link link ">Continue reading</a>
+                            
+                        
+                    
+                    
+                        </p>
+                    
+                </div>
+            </div>
+            
+        </article>
+    
+        
+        
+                <article class="postShorten" itemscope itemType="http://schema.org/BlogPosting">
+        
+            <div class="postShorten-wrap">
+                <div class="postShorten-header">
+                    <h1 class="postShorten-title" itemprop="headline">
+                        
+                                <a class="link-unstyled" href="/2007/08/30/parting-out-my-corrado/">Parting out My Corrado</a>
+                        
+                    </h1>
+                    <div class="postShorten-meta">
+    <time itemprop="datePublished" content="Thu Aug 30 2007 20:19:34 GMT-0400">
+	
+		    Aug 30, 2007
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Auto/">Auto</a>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+    
+</div>
+                </div>
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    
+                        <p>
+                            Update: My Corrado is now gone, off to a new home. I don’t have many Corrado specific parts left. Sorry, and thanks for the interest!
+I’m sorry to say, but I’ve got to throw in the towel. I’ve spent t<br>
+                    
+                    
+                        
+                            <a href="/2007/08/30/parting-out-my-corrado/" class="postShorten-excerpt_link link ">Continue reading</a>
+                            
+                        
+                    
+                    
+                        </p>
+                    
+                </div>
+            </div>
+            
+        </article>
+    
+        
+        
+                <article class="postShorten" itemscope itemType="http://schema.org/BlogPosting">
+        
+            <div class="postShorten-wrap">
+                <div class="postShorten-header">
+                    <h1 class="postShorten-title" itemprop="headline">
+                        
+                                <a class="link-unstyled" href="/2007/08/01/electric-pusher-trailers/">Electric Pusher Trailers</a>
+                        
+                    </h1>
+                    <div class="postShorten-meta">
+    <time itemprop="datePublished" content="Wed Aug 01 2007 22:55:34 GMT-0400">
+	
+		    Aug 01, 2007
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Auto/">Auto</a>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
+    
+</div>
+                </div>
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    
+                        <p>
+                            Some co-workers brought up the idea of creating an electric pusher-trailer to take the load off a gas-powered car… you know, incase you wanted a hybrid but couldn’t afford a Prius… or maybe you just c<br>
+                    
+                    
+                        
+                            <a href="/2007/08/01/electric-pusher-trailers/" class="postShorten-excerpt_link link ">Continue reading</a>
+                            
+                        
+                    
+                    
+                        </p>
+                    
+                </div>
+            </div>
+            
+        </article>
+    
+        
+        
+                <article class="postShorten" itemscope itemType="http://schema.org/BlogPosting">
+        
+            <div class="postShorten-wrap">
+                <div class="postShorten-header">
+                    <h1 class="postShorten-title" itemprop="headline">
+                        
+                                <a class="link-unstyled" href="/2007/05/04/mdnsresponder-gcc-4-1-ubuntu-problem-persists/">mDNSResponder / GCC 4.1 / Ubuntu Problem persists</a>
+                        
+                    </h1>
+                    <div class="postShorten-meta">
+    <time itemprop="datePublished" content="Fri May 04 2007 14:52:08 GMT-0400">
+	
+		    May 04, 2007
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Tech/">Tech</a>
 
-  </div>
-</body>
+
+    
+</div>
+                </div>
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    
+                        <p>
+                            A “while back”:http://www.offthehill.org/articles/2007/01/23/mdnsresponder-and-gcc-4-1-compiling-issuesI reported on an obscure problem when compiling applications against the dnssd library that comes<br>
+                    
+                    
+                        
+                            <a href="/2007/05/04/mdnsresponder-gcc-4-1-ubuntu-problem-persists/" class="postShorten-excerpt_link link ">Continue reading</a>
+                            
+                        
+                    
+                    
+                        </p>
+                    
+                </div>
+            </div>
+            
+        </article>
+    
+        
+        
+                <article class="postShorten" itemscope itemType="http://schema.org/BlogPosting">
+        
+            <div class="postShorten-wrap">
+                <div class="postShorten-header">
+                    <h1 class="postShorten-title" itemprop="headline">
+                        
+                                <a class="link-unstyled" href="/2007/03/26/blister-in-the-sun/">Blister in the Sun</a>
+                        
+                    </h1>
+                    <div class="postShorten-meta">
+    <time itemprop="datePublished" content="Mon Mar 26 2007 21:02:56 GMT-0400">
+	
+		    Mar 26, 2007
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Everything-Else/">Everything Else</a>
+
+
+    
+</div>
+                </div>
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    
+                        <p>
+                            You know there is something wrong with the world when you start hearing Violent Femmes songs about masturbation in the background of Wendy’s commercials. Or maybe I’m just getting old.
+<br>
+                    
+                    
+                        
+                            <a href="/2007/03/26/blister-in-the-sun/" class="postShorten-excerpt_link link ">Continue reading</a>
+                            
+                        
+                    
+                    
+                        </p>
+                    
+                </div>
+            </div>
+            
+        </article>
+    
+        
+        
+                <article class="postShorten" itemscope itemType="http://schema.org/BlogPosting">
+        
+            <div class="postShorten-wrap">
+                <div class="postShorten-header">
+                    <h1 class="postShorten-title" itemprop="headline">
+                        
+                                <a class="link-unstyled" href="/2007/03/13/sticking-it-to-the-cable-company/">Sticking it to the Cable Company</a>
+                        
+                    </h1>
+                    <div class="postShorten-meta">
+    <time itemprop="datePublished" content="Tue Mar 13 2007 12:38:34 GMT-0400">
+	
+		    Mar 13, 2007
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Tech/">Tech</a>
+
+
+    
+</div>
+                </div>
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    
+                        <p>
+                            We recently returned our rented cable modem and cable box (neither of which we wanted anyway, we have our own cable modem) and downgraded out TV service to ‘basic’, which is pretty much the old 2 thro<br>
+                    
+                    
+                        
+                            <a href="/2007/03/13/sticking-it-to-the-cable-company/" class="postShorten-excerpt_link link ">Continue reading</a>
+                            
+                        
+                    
+                    
+                        </p>
+                    
+                </div>
+            </div>
+            
+        </article>
+    
+        
+        
+                <article class="postShorten" itemscope itemType="http://schema.org/BlogPosting">
+        
+            <div class="postShorten-wrap">
+                <div class="postShorten-header">
+                    <h1 class="postShorten-title" itemprop="headline">
+                        
+                                <a class="link-unstyled" href="/2007/03/03/home-improvement-washer-and-dryer-install/">Home improvement: Washer and Dryer Install</a>
+                        
+                    </h1>
+                    <div class="postShorten-meta">
+    <time itemprop="datePublished" content="Sat Mar 03 2007 15:49:13 GMT-0500">
+	
+		    Mar 03, 2007
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Home/">Home</a>
+
+
+    
+</div>
+                </div>
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    
+                        <p>
+                            We got a new washer and dryer today. The delivery was pretty straight forward, but it took the plumber about 5 hours to create the drain and move the pipes and everything. That cost $450. On top of th<br>
+                    
+                    
+                        
+                            <a href="/2007/03/03/home-improvement-washer-and-dryer-install/" class="postShorten-excerpt_link link ">Continue reading</a>
+                            
+                        
+                    
+                    
+                        </p>
+                    
+                </div>
+            </div>
+            
+        </article>
+    
+        
+        
+                <article class="postShorten" itemscope itemType="http://schema.org/BlogPosting">
+        
+            <div class="postShorten-wrap">
+                <div class="postShorten-header">
+                    <h1 class="postShorten-title" itemprop="headline">
+                        
+                                <a class="link-unstyled" href="/2007/02/17/not-exactly-highbrow/">Not Exactly Highbrow...</a>
+                        
+                    </h1>
+                    <div class="postShorten-meta">
+    <time itemprop="datePublished" content="Sat Feb 17 2007 17:50:04 GMT-0500">
+	
+		    Feb 17, 2007
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Art/">Art</a>
+
+
+    
+</div>
+                </div>
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    
+                        <p>
+                            …but at least I’m drawing…
+
+Don’t piss Frylock off.
+<br>
+                    
+                    
+                        
+                            <a href="/2007/02/17/not-exactly-highbrow/" class="postShorten-excerpt_link link ">Continue reading</a>
+                            
+                        
+                    
+                    
+                        </p>
+                    
+                </div>
+            </div>
+            
+        </article>
+    
+        
+        
+                <article class="postShorten" itemscope itemType="http://schema.org/BlogPosting">
+        
+            <div class="postShorten-wrap">
+                <div class="postShorten-header">
+                    <h1 class="postShorten-title" itemprop="headline">
+                        
+                                <a class="link-unstyled" href="/2007/02/17/quick-sketches/">Quick Sketches</a>
+                        
+                    </h1>
+                    <div class="postShorten-meta">
+    <time itemprop="datePublished" content="Sat Feb 17 2007 16:13:52 GMT-0500">
+	
+		    Feb 17, 2007
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Art/">Art</a>
+
+
+    
+</div>
+                </div>
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    
+                        <p>
+                            Here are a few quick sketches I did a while back…
+A camera…
+My parent’s dog Sydney
+
+<br>
+                    
+                    
+                        
+                            <a href="/2007/02/17/quick-sketches/" class="postShorten-excerpt_link link ">Continue reading</a>
+                            
+                        
+                    
+                    
+                        </p>
+                    
+                </div>
+            </div>
+            
+        </article>
+    
+        
+        
+                <article class="postShorten" itemscope itemType="http://schema.org/BlogPosting">
+        
+            <div class="postShorten-wrap">
+                <div class="postShorten-header">
+                    <h1 class="postShorten-title" itemprop="headline">
+                        
+                                <a class="link-unstyled" href="/2007/02/17/encoding-psp-video-on-ubuntu-6-10-edgy-linux-2/">Tivo Video on your PSP with Linux</a>
+                        
+                    </h1>
+                    <div class="postShorten-meta">
+    <time itemprop="datePublished" content="Sat Feb 17 2007 15:02:34 GMT-0500">
+	
+		    Feb 17, 2007
+    	
+    </time>
+    
+        <span>in </span>
+        
+    <a class="category-link" href="/categories/Tech/">Tech</a>
+
+
+    
+</div>
+                </div>
+                <div class="postShorten-excerpt" itemprop="articleBody">
+                    
+                        <p>
+                            Tivos are great for recording video at home and Sony PSPs are great for watching video away from home. But how do you take you Tivo videos on the road with you? This guide will show you how.
+h3. Requi<br>
+                    
+                    
+                        
+                            <a href="/2007/02/17/encoding-psp-video-on-ubuntu-6-10-edgy-linux-2/" class="postShorten-excerpt_link link ">Continue reading</a>
+                            
+                        
+                    
+                    
+                        </p>
+                    
+                </div>
+            </div>
+            
+        </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
+        
+        <li class="pagination-prev">
+            
+                <a class="btn btn--default btn--small" href="/page/8/">
+            
+                <i class="fa fa-angle-left text-base icon-mr"></i>
+                    <span>NEWER POSTS</span>
+            </a>
+        </li>
+        
+        
+        <li class="pagination-next">
+            <a class="btn btn--default btn--small" href="/page/10/">
+                    <span>OLDER POSTS</span>
+                <i class="fa fa-angle-right text-base icon-ml"></i>
+            </a>
+        </li>
+        
+        <li class="pagination-number">page 9 of 13</li>
+    </ul>
+</div>
+
+</section>
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2015 Joshua Chaitin-Pollak. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+        </div>
+        <div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="http://www.gravatar.com/avatar/dece77c3e23e33168616cc5a6a955be8?s=110"/>
+        
+            <h4 id="about-card-name">Joshua Chaitin-Pollak</h4>
+        
+            <h5 id="about-card-bio"><p>author.bio</p>
+</h5>
+        
+        
+            <h5 id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>author.job</p>
+
+            </h5>
+        
+        
+    </div>
+</div>
+
+        <div id="cover" style="background-image:url('http://res.cloudinary.com/tranquilpeak-hexo-theme/image/upload/v1438975482/v1.3.0-cover.jpg');"></div>
+    </body>
+    <!--SCRIPTS-->
+<script src="/assets/js/script.min.js" type="text/javascript"></script>
+<!--SCRIPTS END-->
+
+
+    <script type="text/javascript">
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+                (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+            e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','mXtHRtUvXVPw46t1yavn','2.0.0');
+    </script>
+
+
 </html>

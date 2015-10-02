@@ -1,0 +1,762 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[jbcpollak]]></title>
+  
+  <link href="/atom.xml" rel="self"/>
+  <link href="http://code.joshpollak.com/"/>
+  <updated>2015-10-01T19:11:30.000Z</updated>
+  <id>http://code.joshpollak.com/</id>
+  
+  <author>
+    <name><![CDATA[Joshua Chaitin-Pollak]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[A Fix for Broken Google Rich Snippets and Google+ Shares]]></title>
+    <link href="http://code.joshpollak.com/2011/09/15/a-fix-for-broken-google-rich-snippets-and-google-shares/"/>
+    <id>http://code.joshpollak.com/2011/09/15/a-fix-for-broken-google-rich-snippets-and-google-shares/</id>
+    <published>2011-09-15T05:41:24.000Z</published>
+    <updated>2015-10-01T19:11:30.000Z</updated>
+    <content type="html"><![CDATA[<p>Recently I have been struggling with an issue where links to my website do not generate previews in Google+. Instead, the user gets the error <em>“Could not load website. - Retry”</em>. When they try and retry, the error does not go away. Needless to say, although my readership is pretty low, that isn’t helping much.</p>
+<p>When I started poking around, I found that Google+ uses Google’s “Rich Snippet” system. Google has released a <a href="http://www.google.com/webmasters/tools/richsnippets" title="Google" target="_blank" rel="external">Rich Snippet Testing Tool</a>. The tool is great, and it helps you tweak your HTML so you get the correct snippet content.</p>
+<p>…Except in my case, where the tool just reported <em>“Could not fetch web page.”</em>. Not helpful. Why a better error descriptor isn’t given, I don’t know.</p>
+<p>This article will explain how I got to the bottom of the problem (despite Google’s useless error messages) and how you can look for similar issues.</p>
+<a id="more"></a>
+<p>When I realized I was getting intentionally vague responses from the Google tools, I <a href="http://www.google.com/support/forum/p/Webmasters/thread?tid=1a2266a505794a99&amp;hl=en&amp;fid=1a2266a505794a990004ace8be1dfd09" target="_blank" rel="external">posted</a> to Google’s Webmaster Central forums, but didn’t get a useful answer.</p>
+<p>After a few days of thinking about it, I got the idea to try my website on the <a href="http://validator.w3.org/" title="HTML Validator" target="_blank" rel="external">W3 HTML validator site</a>.</p>
+<p>The validator gave me a new error. I lost the actual text, but it said it could not understand <em>Content-Encoding ‘none’</em>. Finally, we’re getting somewhere.</p>
+<p>I started doing research into why Wordpress might be sending the wrong Content-Encoding, but didn’t find anything. So I logged onto my website, and grepped for ‘Content-Encoding’. Nothing really exciting jumped out at me.</p>
+<p><em>But</em>, while I was logged in, I noticed some suspicious PHP files. And then I noticed at the top of wp-config.php a line of PHP that started like this: <code>eval(base64_decode(&quot;aWYoZnV</code>.</p>
+<p>Oh… that’s a sure sign I’ve been hacked. So I followed the instructions <a href="http://blog.sucuri.net/2010/05/new-attack-today-against-wordpress.html" target="_blank" rel="external">here</a>, and removed the hacked code and suspicious PHP files.</p>
+<p>Then I went to the validator, and sure enough, the Content-Encoding had changed, so it was able to actually run the validator. So I tried the Rich Snippet Testing Tool, and sure enough, now it works too! Which means Google+ shares work again!</p>
+<p>So, the bottom line is, if you are having trouble with sharing your website on Google+, check your Content-Encoding, and make sure you haven’t been hacked.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Recently I have been struggling with an issue where links to my website do not generate previews in Google+. Instead, the user gets the error <em>“Could not load website. - Retry”</em>. When they try and retry, the error does not go away. Needless to say, although my readership is pretty low, that isn’t helping much.</p>
+<p>When I started poking around, I found that Google+ uses Google’s “Rich Snippet” system. Google has released a <a href="http://www.google.com/webmasters/tools/richsnippets" title="Google">Rich Snippet Testing Tool</a>. The tool is great, and it helps you tweak your HTML so you get the correct snippet content.</p>
+<p>…Except in my case, where the tool just reported <em>“Could not fetch web page.”</em>. Not helpful. Why a better error descriptor isn’t given, I don’t know.</p>
+<p>This article will explain how I got to the bottom of the problem (despite Google’s useless error messages) and how you can look for similar issues.</p>]]>
+    
+    </summary>
+    
+      <category term="Content-Encoding" scheme="http://code.joshpollak.com/tags/Content-Encoding/"/>
+    
+      <category term="Google Plus" scheme="http://code.joshpollak.com/tags/Google-Plus/"/>
+    
+      <category term="HTML" scheme="http://code.joshpollak.com/tags/HTML/"/>
+    
+      <category term="Hacked" scheme="http://code.joshpollak.com/tags/Hacked/"/>
+    
+      <category term="PHP" scheme="http://code.joshpollak.com/tags/PHP/"/>
+    
+      <category term="Rich Snippets" scheme="http://code.joshpollak.com/tags/Rich-Snippets/"/>
+    
+      <category term="Validator" scheme="http://code.joshpollak.com/tags/Validator/"/>
+    
+      <category term="google" scheme="http://code.joshpollak.com/tags/google/"/>
+    
+      <category term="wordpress" scheme="http://code.joshpollak.com/tags/wordpress/"/>
+    
+      <category term="Tech" scheme="http://code.joshpollak.com/categories/Tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Photos of the FIA GT1 Championship in Beijing]]></title>
+    <link href="http://code.joshpollak.com/2011/09/12/fia-gt1-championship-in-beijing/"/>
+    <id>http://code.joshpollak.com/2011/09/12/fia-gt1-championship-in-beijing/</id>
+    <published>2011-09-12T18:01:54.000Z</published>
+    <updated>2015-10-01T19:11:30.000Z</updated>
+    <content type="html"><![CDATA[<p>The GT1 Championship this weekend was a pretty soggy affair, but I got to take some photos…</p>
+<p><a href="http://www.joshpollak.com/Cars/Racing/2011-FIA-GT1-Beijing/18995038_thTJxj#1475626489_JS8KS5s-A-LB" target="_blank" rel="external"><img src="http://www.joshpollak.com/Cars/Racing/2011-FIA-GT1-Beijing/i-JS8KS5s/0/M/All-Alone-M.jpg" alt="The China Exim Corvette alone at the FIA GT1 Championship in Beijing" title="All Alone"></a></p>
+<p><a href="http://www.joshpollak.com/Cars/Racing/2011-FIA-GT1-Beijing/18995038_thTJxj#1475626489_JS8KS5s" target="_blank" rel="external">Click here to see the whole album</a>.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>The GT1 Championship this weekend was a pretty soggy affair, but I got to take some photos…</p>
+<p><a href="http://www.joshpollak.com/Car]]>
+    </summary>
+    
+      <category term="FIA GT1" scheme="http://code.joshpollak.com/tags/FIA-GT1/"/>
+    
+      <category term="Motorsports" scheme="http://code.joshpollak.com/tags/Motorsports/"/>
+    
+      <category term="Racing" scheme="http://code.joshpollak.com/tags/Racing/"/>
+    
+      <category term="cars" scheme="http://code.joshpollak.com/tags/cars/"/>
+    
+      <category term="China" scheme="http://code.joshpollak.com/categories/China/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Kata Bumblebee UL-222 Review]]></title>
+    <link href="http://code.joshpollak.com/2011/08/29/kata-bumblebee-222-ul-review/"/>
+    <id>http://code.joshpollak.com/2011/08/29/kata-bumblebee-222-ul-review/</id>
+    <published>2011-08-30T02:32:56.000Z</published>
+    <updated>2015-10-01T19:57:20.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="http://www.offthehill.org/wp-content/uploads/2011/08/kata-bumblebee-ul-222-l.jpeg" target="_blank" rel="external"><img src="http://www.offthehill.org/wp-content/uploads/2011/08/kata-bumblebee-ul-222-l-300x300.jpg" alt="" title="The Kata Bumblebee UL-222 ultralight camera bag"></a> I just wanted to write about my impression of the <a href="http://www.amazon.com/gp/product/B003BIFNE6/ref=as_li_ss_tl?ie=UTF8&amp;tag=wwwoffthehill-20&amp;linkCode=as2&amp;camp=217145&amp;creative=399369&amp;creativeASIN=B003BIFNE6" target="_blank" rel="external">Kata Bumblebee UL-222</a><img src="http://www.assoc-amazon.com/e/ir?t=&amp;l=as2&amp;o=1&amp;a=B003BIFNE6&amp;camp=217145&amp;creative=399369" alt=""> backpack, which I just bought and have had the chance to use a few times.</p>
+<p>This is a fantastic, well built, sturdy and light bag. It is also extremely comfortable to wear, most of the time. If your gear all fits within the backpack, you’ll love it and be thrilled with it.</p>
+<p>Unfortunately for me, I have a thing about camera bags, and I’m extremely picky. When I bought the UL-222, I was hoping it would be a larger, more professional replacement for my <a href="http://www.amazon.com/gp/product/B000FJ2OSM/ref=as_li_ss_tl?ie=UTF8&amp;tag=wwwoffthehill-20&amp;linkCode=as2&amp;camp=217145&amp;creative=399369&amp;creativeASIN=B000FJ2OSM" target="_blank" rel="external">National Geographic NG 5162 (Earth Explorer Medium)</a><img src="http://www.assoc-amazon.com/e/ir?t=&amp;l=as2&amp;o=1&amp;a=B000FJ2OSM&amp;camp=217145&amp;creative=399369" alt=""> bag: Something flexible and efficient I could back professional camera gear in, as well as enough personal stuff for a multi-day trip.</p>
+<p>Unfortunately, for my purposes the bag is pretty compromised…<br><a id="more"></a><br>I mention the National Geographic bag because I suspect Kata makes it. It is a fantastic bag although I had to modify it to make my 15” MacBook fit, and it isn’t quite deep enough to hold a professional SLR safely.</p>
+<p>Here are my specific issues on the Bumblebee UL-222:</p>
+<ul>
+<li>It is about 1” too ‘thick’ (from shoulder straps to the protective ‘spine’) to fit easily in smaller airplane (ie, 727) overhead compartments. If it was just a touch shallower (or more crushable), it would fit without problems. How can someone travel with this bag if they are constantly in fear it won’t fit overhead? Its not like you can check photography equipment as luggage. This will probably be the biggest issue for most people. Don’t get me wrong, it WILL fit in the overhead compartment of a 727, but it takes a bit more coercion than I would like</li>
+<li><p>I wish the top compartment, instead of being s small rounded hatch, was an adjustable-sized drawstring-and-hood like the NG bag, or like a hiking backpack. This would allow the bag to store more stuff when needed and collapse down when not.</p>
+</li>
+<li><p>The tripod attachment options are terrible. When in the centered, location, the tripod extends beyond the bottom of the bag, making it impossible to stand the bag up, and you need to leave the zippered pouch open strap the tripod top in, which just seems odd. When on the side, the tripod doesn’t extend past the bottom, but the upper strap distorts the top of the bag and the entire tripod blocks the only place for a water-bottle. On the NG 5162, I was able to use the accessory straps on the bottom or side of the backpack to attach a tripod without any of these issues.</p>
+</li>
+<li><p>The bag lacks decent strorage compartments for water bottles. The NG 5162 has two large, pullout, velcro-stabilized places for water bottles, and they work great. The UL-222 has one elastic compartment, it is too small and short for any reasonable sized bottle (ie, 750ml or larger).</p>
+</li>
+<li><p>The bag has no good places for attachments or accessories. I was hoping like the NG 5162 there would be strap attachments at the bottom to strap a duffle bag or sleeping bag to.</p>
+</li>
+<li><p>The aluminum frame is awesome, and does a great job keeping the pack off my back, but the hip belt is too flimsy to use to support much of the weight of the bag, which can be pretty heavy when fully loaded with a camera, equipment, and a laptop. I sort of wish the bag came in a few frame sizes, the way a hiking backpack does, with a better hip-stabilizer strap.</p>
+</li>
+</ul>
+<p>I find myself planning to jury-rig something to attach a simple crush bag to the EPH attachment points at the bottom of the bag so I can carry some more personal gear, but I noticed the EPH attachments are only in the back, so to keep the additional bag strapped in, I’ll need to use the tripod-holder loops on the front flap of the bag, meaning I’ll need to release the attachment just to open the bag, which is annoying.</p>
+<p>The bag is extremely well thought out, which is why all these little things add up to such a frustrating experience. If you can live within the design of the bag, and don’t need to carry water or can fit it inside the bag (near your camera?) you will really enjoy this bag. It does hold a ton of camera gear safely and it is the most comfortable camera bag I’ve ever worn.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><a href="http://www.offthehill.org/wp-content/uploads/2011/08/kata-bumblebee-ul-222-l.jpeg"><img src="http://www.offthehill.org/wp-content/uploads/2011/08/kata-bumblebee-ul-222-l-300x300.jpg" alt="" title="The Kata Bumblebee UL-222 ultralight camera bag"></a> I just wanted to write about my impression of the <a href="http://www.amazon.com/gp/product/B003BIFNE6/ref=as_li_ss_tl?ie=UTF8&amp;tag=wwwoffthehill-20&amp;linkCode=as2&amp;camp=217145&amp;creative=399369&amp;creativeASIN=B003BIFNE6">Kata Bumblebee UL-222</a><img src="http://www.assoc-amazon.com/e/ir?t=&amp;l=as2&amp;o=1&amp;a=B003BIFNE6&amp;camp=217145&amp;creative=399369" alt=""> backpack, which I just bought and have had the chance to use a few times.</p>
+<p>This is a fantastic, well built, sturdy and light bag. It is also extremely comfortable to wear, most of the time. If your gear all fits within the backpack, you’ll love it and be thrilled with it.</p>
+<p>Unfortunately for me, I have a thing about camera bags, and I’m extremely picky. When I bought the UL-222, I was hoping it would be a larger, more professional replacement for my <a href="http://www.amazon.com/gp/product/B000FJ2OSM/ref=as_li_ss_tl?ie=UTF8&amp;tag=wwwoffthehill-20&amp;linkCode=as2&amp;camp=217145&amp;creative=399369&amp;creativeASIN=B000FJ2OSM">National Geographic NG 5162 (Earth Explorer Medium)</a><img src="http://www.assoc-amazon.com/e/ir?t=&amp;l=as2&amp;o=1&amp;a=B000FJ2OSM&amp;camp=217145&amp;creative=399369" alt=""> bag: Something flexible and efficient I could back professional camera gear in, as well as enough personal stuff for a multi-day trip.</p>
+<p>Unfortunately, for my purposes the bag is pretty compromised…<br>]]>
+    
+    </summary>
+    
+      <category term="222-UL" scheme="http://code.joshpollak.com/tags/222-UL/"/>
+    
+      <category term="UL-222" scheme="http://code.joshpollak.com/tags/UL-222/"/>
+    
+      <category term="backpack" scheme="http://code.joshpollak.com/tags/backpack/"/>
+    
+      <category term="bumblebee" scheme="http://code.joshpollak.com/tags/bumblebee/"/>
+    
+      <category term="camera bag" scheme="http://code.joshpollak.com/tags/camera-bag/"/>
+    
+      <category term="hiking" scheme="http://code.joshpollak.com/tags/hiking/"/>
+    
+      <category term="kata" scheme="http://code.joshpollak.com/tags/kata/"/>
+    
+      <category term="photography" scheme="http://code.joshpollak.com/tags/photography/"/>
+    
+      <category term="tripod" scheme="http://code.joshpollak.com/tags/tripod/"/>
+    
+      <category term="Travel" scheme="http://code.joshpollak.com/categories/Travel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[MacFUSE for OS X Lion]]></title>
+    <link href="http://code.joshpollak.com/2011/07/21/macfuse-for-os-x-lion/"/>
+    <id>http://code.joshpollak.com/2011/07/21/macfuse-for-os-x-lion/</id>
+    <published>2011-07-21T22:23:30.000Z</published>
+    <updated>2015-10-01T19:57:20.000Z</updated>
+    <content type="html"><![CDATA[<p>I have <a href="http://www.offthehill.org/articles/2010/12/31/macfuse-for-64-bit-snow-leopard" title="MacFuse for 64-bit Snow Leopard" target="_blank" rel="external">previously posted</a> about using MacFuse with Snow Leopard, but if you have already upgraded to <strong>OS X Lion</strong>, you may be having trouble finding a version of FUSE to use.</p>
+<p>Many people have commented that my <a href="http://www.offthehill.org/articles/2010/12/31/macfuse-for-64-bit-snow-leopard" title="MacFuse for 64-bit Snow Leopard" target="_blank" rel="external">Snow Leopard build</a> works fine, but according to <a href="http://groups.google.com/group/macfuse/browse_thread/thread/217a91cb665dfab5" title="this thread" target="_blank" rel="external">this thread</a> there is a new project called OSXFUSE that picks up where MacFuse left off. The project incorporates the source code below and already supports OS X Lion natively. The project is just getting started, but a beta binary release is promised in the next few days.</p>
+<p><em>I would recommend waiting for OSXFUSE.</em></p>
+<p>You can find more information at the <a href="http://osxfuse.github.com/" title="project homepage" target="_blank" rel="external">project homepage</a> (not online yet) or find the source code on <a href="https://github.com/osxfuse" title="github" target="_blank" rel="external">github</a>.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>I have <a href="http://www.offthehill.org/articles/2010/12/31/macfuse-for-64-bit-snow-leopard" title="MacFuse for 64-bit Snow Leopard" ta]]>
+    </summary>
+    
+      <category term="OS X" scheme="http://code.joshpollak.com/tags/OS-X/"/>
+    
+      <category term="fuse" scheme="http://code.joshpollak.com/tags/fuse/"/>
+    
+      <category term="lion" scheme="http://code.joshpollak.com/tags/lion/"/>
+    
+      <category term="mac" scheme="http://code.joshpollak.com/tags/mac/"/>
+    
+      <category term="macfuse" scheme="http://code.joshpollak.com/tags/macfuse/"/>
+    
+      <category term="osx" scheme="http://code.joshpollak.com/tags/osx/"/>
+    
+      <category term="osxfuse" scheme="http://code.joshpollak.com/tags/osxfuse/"/>
+    
+      <category term="snow leopard" scheme="http://code.joshpollak.com/tags/snow-leopard/"/>
+    
+      <category term="Tech" scheme="http://code.joshpollak.com/categories/Tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Java: Static Variables are WRONG (Almost Always)]]></title>
+    <link href="http://code.joshpollak.com/2011/06/03/java-static-variables-are-wrong-almost-always/"/>
+    <id>http://code.joshpollak.com/2011/06/03/java-static-variables-are-wrong-almost-always/</id>
+    <published>2011-06-03T06:25:57.000Z</published>
+    <updated>2015-10-01T19:57:20.000Z</updated>
+    <content type="html"><![CDATA[<p>This topic came up at work recently, and I thought it might be useful to the wider internet audience…</p>
+<p>When doing code reviews, I often come across components which utilize static mutable objects. Typically these are static Maps and other Collections.</p>
+<p>If you are using the ‘static’ keyword without the ‘final’ keyword, this should be a signal to carefully consider your design. Even the presence of a ‘final’ is not a free pass, since a mutable static final object can be just as dangerous.</p>
+<p>I would estimate somewhere around 85% of the time I see a ‘static’ without a ‘final’, it is <em>WRONG</em>. Often, I will find strange workarounds to mask or hide these problems.</p>
+<p>Please don’t create static mutables. <em>Especially</em> Collections. In general, Collections should be initialized when their containing object is initialized and should be designed so that they are reset or forgotten about when their containing object is forgotten.</p>
+<p>Using statics can create very subtle bugs which will cause sustaining engineers days of pain. I know, because I’ve both created and hunted these bugs.</p>
+<p>If you would like more details, please read on…</p>
+<h3 id="Why_Not_Use_Statics?">Why Not Use Statics?</h3><p>There are many issues with statics:</p>
+<ul>
+<li>Writing Tests</li>
+<li>Executing Tests</li>
+<li>Subtle Bugs</li>
+</ul>
+<h3 id="Writing_Tests">Writing Tests</h3><p>Code that relies on static objects can’t be easily unit tested, and statics can’t be easily mocked.</p>
+<p>If you use statics, it is not possible to swap the implementation of the class out in order to test higher level components. For example, imagine a static CustomerDAO that returns Customer objects it loads from the database. Now I have a class CustomerFilter, that needs to access some Customer objects. If CustomerDAO is static, I can’t write a test for CustomerFilter without first initializing my database and populating useful information.</p>
+<p>And database population and initialization takes a long time. And in my experience, your DB initialization framework will change over time, meaning data will morph, and tests may break. IE, imagine Customer 1 used to be a VIP, but the DB initialization framework changed, and now Customer 1 is no longer VIP, but your test was hard-coded to load Customer 1…</p>
+<p>A better approach is to instantiate a CustomerDAO, and pass it into the CustomerFilter when it is constructed. (An even better approach would be to use <a href="http://www.springsource.org" target="_blank" rel="external">Spring</a> or another <a href="http://en.wikipedia.org/wiki/Inversion_of_control" target="_blank" rel="external">Inversion of Control</a> framework.</p>
+<p>Once you do this, you can quickly <a href="http://www.jmock.org/" target="_blank" rel="external">mock</a> or stub out an alternate DAO in your CustomerFilterTest, allowing you to have more control over the test,</p>
+<p>Without the static DAO, the test will be faster (no db initialization) and more reliable (because it won’t fail when the db initialization code changes). For example, in this case ensuring Customer 1 is and always will be a VIP, as far as the test is concerned.</p>
+<h3 id="Executing_Tests">Executing Tests</h3><p>Statics cause a real problem when running suites of unit tests together (for example, with your Continuous Integration server). Imagine a static map of network Socket objects that remains open from one test to another. The first test might open a Socket on port 8080, but you forgot to clear out the Map when the test gets torn down. Now when a second test launches, it is likely to crash when it tries to create a new Socket for port 8080, since the port is still occupied.</p>
+<p>This is an over-generalized example, but in large systems, this problem happens <em>ALL THE TIME</em>. People don’t think of unit tests starting and stopping their software repeatedly in the same JVM, but it is a good test of your software design, and if you have aspirations towards high availability, it is something you need to be aware of.</p>
+<p>These problems often arise with framework objects, for example, your DB access, caching, messaging, and logging layers. If you are using J2EE or some best of breed frameworks, they probably manage a lot of this for you, but if like me you are dealing with a legacy system, you might have a lot of custom frameworks to access these layers.</p>
+<p>If the system configuration that applies to these framework components changes between unit tests, and the unit test framework doesn’t tear down and rebuild the components, these changes can’t take effect, and when a test relies on those changes, they will fail.</p>
+<p>Even non-framework components are subject to this problem. Imagine a static map called OpenOrders. You write one test that creates a few open orders, and checks to make sure they are all in the right state, then the test ends. Another developer writes a second test which puts the orders it needs into the OpenOrders map, then asserts the number of orders is accurate. Run individually, these tests would both pass, but when run together in a suite, they will fail.</p>
+<p>Worse, failure might be based on the order in which the tests were run.</p>
+<p>In this case, by avoiding statics, you avoid the risk of persisting data across test instances, ensuring better test reliability.</p>
+<h3 id="Subtle_Bugs">Subtle Bugs</h3><p>If you work in high availability environment, or anywhere that threads might be started and stopped, the same concern mentioned above with unit test suites can apply when your code is running on production as well.</p>
+<p>When dealing with threads, rather than using a static object to store data, it is better to use an object initialized during the thread’s startup phase. This way, each time the thread is started, a new instance of the object (with a potentially new configuration) is created, and you avoid data from one instance of the thread bleeding through to the next instance.</p>
+<p>When a thread dies, a static object doesn’t get reset or garbage collected. Imagine you have a thread called “EmailCustomers”, and when it starts it populates a static String collection with a list of email addresses, then begins emailing each of the addresses. Lets say the thread is interrupted or canceled somehow, so your high availability framework restarts the thread. Then when the thread starts up, it reloads the list of customers. But because the collection is static, it might retain the list of email addresses from the previous collection. Now some customers might get duplicate emails.</p>
+<h3 id="An_Aside:_Static_Final">An Aside: Static Final</h3><p>The use of “static final” is effectively the Java equivalent of a C #define, although there are technical implementation differences. A C/C++ #define is swapped out of the code by the pre-processor, before compilation. A Java “static final” will end up memory resident on the stack. In that way, it is more similar to a “static const” variable in C++ than it is to a #define.</p>
+<h3 id="Summary">Summary</h3><p>I hope this helps explain a few basic reasons why statics are problematic up. If you are using a modern Java framework like J2EE or Spring, etc, you may not encounter many of these situations, but if you are working with a large body of legacy code, they can become much more frequent.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>This topic came up at work recently, and I thought it might be useful to the wider internet audience…</p>
+<p>When doing code reviews, I o]]>
+    </summary>
+    
+      <category term="code" scheme="http://code.joshpollak.com/tags/code/"/>
+    
+      <category term="collections" scheme="http://code.joshpollak.com/tags/collections/"/>
+    
+      <category term="example" scheme="http://code.joshpollak.com/tags/example/"/>
+    
+      <category term="final" scheme="http://code.joshpollak.com/tags/final/"/>
+    
+      <category term="framework" scheme="http://code.joshpollak.com/tags/framework/"/>
+    
+      <category term="j2ee" scheme="http://code.joshpollak.com/tags/j2ee/"/>
+    
+      <category term="java" scheme="http://code.joshpollak.com/tags/java/"/>
+    
+      <category term="legacy" scheme="http://code.joshpollak.com/tags/legacy/"/>
+    
+      <category term="map" scheme="http://code.joshpollak.com/tags/map/"/>
+    
+      <category term="mock" scheme="http://code.joshpollak.com/tags/mock/"/>
+    
+      <category term="mutable" scheme="http://code.joshpollak.com/tags/mutable/"/>
+    
+      <category term="programming" scheme="http://code.joshpollak.com/tags/programming/"/>
+    
+      <category term="spring" scheme="http://code.joshpollak.com/tags/spring/"/>
+    
+      <category term="static" scheme="http://code.joshpollak.com/tags/static/"/>
+    
+      <category term="testing" scheme="http://code.joshpollak.com/tags/testing/"/>
+    
+      <category term="variables" scheme="http://code.joshpollak.com/tags/variables/"/>
+    
+      <category term="Tech" scheme="http://code.joshpollak.com/categories/Tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Beware Chinese Electronics: Part 1]]></title>
+    <link href="http://code.joshpollak.com/2011/03/23/beware-chinese-electronics-part-1/"/>
+    <id>http://code.joshpollak.com/2011/03/23/beware-chinese-electronics-part-1/</id>
+    <published>2011-03-24T02:21:44.000Z</published>
+    <updated>2015-10-01T19:11:30.000Z</updated>
+    <content type="html"><![CDATA[<p>Last September when I was in China, I needed a harddrive to store all the photos I was taking, plus I wanted to see what the electronics markets in Zhongguancun looked like. Zhongguancun can be pretty overwhelming, but it is an amazing place. This post isn’t about ZOL specifically, its about what I got there…</p>
+<p>In one of the electronic markets, I found a small booth selling harddrives, and we asked what the price for a 250gb model would be. Whatever the price was, it wasn’t unreasonable. The harddrive came in a nice shrink wrapped box labeled “SAMSUNG” in the traditional Samsung white-and-blue color scheme. I wish I had thought to take a picture of it. I have no doubt the box was authentic.</p>
+<p>Inside the box was a black harddrive case with gold trim, labeled “Samsung”. I suspected something was up right away because gold trim doesn’t seem to fit Samsung’s “style”, and the case was held together with 8 tiny screws. Most retail external harddrives are held together with screwless, snap-together designs and look much trendier than this basic case.</p>
+<p>Worse, when I plugged the harddrive into the computer, it registered as a <strong>Hitachi</strong> model. Why would Samsung source harddrives from Hitachi when I know they make their own units? Since the harddrive worked, and I hadn’t paid too-too much for it, I didn’t really mind.</p>
+<p>Later, I decided I would swap the Hitachi harddrive from this case into a better one I happen to have. Not only is the drive a Hitachi model, its <em>refurbished</em>!</p>
+<p>[caption id=”attachment_291” align=”aligncenter” width=”300” caption=”Shanzai!”]<a href="http://www.offthehill.org/wp-content/uploads/2011/03/Samsung-Hitatchi-Harddrive.jpg" target="_blank" rel="external"><img src="http://www.offthehill.org/wp-content/uploads/2011/03/Samsung-Hitatchi-Harddrive-300x224.jpg" alt="A refurbished hitachi harddrive sits between the top and bottom of a fake Samsung external harddrive case " title="A Refurbished Hitachi Harddrive hidden in a fake Samsung case"></a>[/caption]</p>
+<p>Lesson learned: Never buy a harddrive in China.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Last September when I was in China, I needed a harddrive to store all the photos I was taking, plus I wanted to see what the electronics ]]>
+    </summary>
+    
+      <category term="fake electronics" scheme="http://code.joshpollak.com/tags/fake-electronics/"/>
+    
+      <category term="hitachi" scheme="http://code.joshpollak.com/tags/hitachi/"/>
+    
+      <category term="refurbished" scheme="http://code.joshpollak.com/tags/refurbished/"/>
+    
+      <category term="samsung" scheme="http://code.joshpollak.com/tags/samsung/"/>
+    
+      <category term="shanzai" scheme="http://code.joshpollak.com/tags/shanzai/"/>
+    
+      <category term="zhongguancun" scheme="http://code.joshpollak.com/tags/zhongguancun/"/>
+    
+      <category term="China" scheme="http://code.joshpollak.com/categories/China/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Mame Cabinets at Kro's Nest]]></title>
+    <link href="http://code.joshpollak.com/2011/03/18/mame-cabinets-at-kros-nest/"/>
+    <id>http://code.joshpollak.com/2011/03/18/mame-cabinets-at-kros-nest/</id>
+    <published>2011-03-18T05:58:06.000Z</published>
+    <updated>2015-10-01T19:57:20.000Z</updated>
+    <content type="html"><![CDATA[<p>We went to the Kro’s Nest restaurant yesterday and I noticed they had these custom arcade enclosures running what I am guessing is <a href="http://mamedev.org/" target="_blank" rel="external">MAME</a> under the covers. The games seem to rotate on a daily basis, and I <em>think</em> they are free, though I’m not sure.</p>
+<p>[caption id=”attachment_284” align=”aligncenter” width=”1280” caption=”The new Kro&#039;s Nest has custom mame arcade cabinets with a rotating schedule of games.”]<a href="http://www.offthehill.org/wp-content/uploads/2011/03/mame-cabinets-at-Kros-Nest.jpg" target="_blank" rel="external"><img src="http://www.offthehill.org/wp-content/uploads/2011/03/mame-cabinets-at-Kros-Nest.jpg" alt="Two custom arcade cabinets, painted in graffiti and apparently running mame, at the lobby of The Kro&#039;s Nest, running the games 1941 and Double Dragon" title="Custom arcade cabinets at Kro&#039;s Nest run Double Dragon, 1941, and other games on a rotating schedule"></a>[/caption]</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>We went to the Kro’s Nest restaurant yesterday and I noticed they had these custom arcade enclosures running what I am guessing is <a hre]]>
+    </summary>
+    
+      <category term="arcade" scheme="http://code.joshpollak.com/tags/arcade/"/>
+    
+      <category term="arcade cabinet" scheme="http://code.joshpollak.com/tags/arcade-cabinet/"/>
+    
+      <category term="beijing" scheme="http://code.joshpollak.com/tags/beijing/"/>
+    
+      <category term="china" scheme="http://code.joshpollak.com/tags/china/"/>
+    
+      <category term="gaming" scheme="http://code.joshpollak.com/tags/gaming/"/>
+    
+      <category term="mame" scheme="http://code.joshpollak.com/tags/mame/"/>
+    
+      <category term="China" scheme="http://code.joshpollak.com/categories/China/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Online China Resources]]></title>
+    <link href="http://code.joshpollak.com/2011/03/14/online-china-resources/"/>
+    <id>http://code.joshpollak.com/2011/03/14/online-china-resources/</id>
+    <published>2011-03-14T12:04:00.000Z</published>
+    <updated>2015-10-01T19:57:20.000Z</updated>
+    <content type="html"><![CDATA[<p>I’m mostly posting this for my own future reference, but if you’d like to get a feeling for the Chinese expat experience, or how to do business in China in general, <a href="http://chinageeks.org/" target="_blank" rel="external">chinageeks.org</a> has an awesome collection of <a href="http://chinageeks.org/blogroll/" target="_blank" rel="external">blogs about China</a>.</p>
+<p>Because I’m into motorsports, and I’d like to get a donor-cycle, I’ve also been spending a fair amount of time on the forums at <a href="http://www.mychinamoto.com/" target="_blank" rel="external">mychinamoto.com</a>.</p>
+<p>Also, I found a <a href="http://www.beijinglug.org/" target="_blank" rel="external">Linux Users Group</a> here in Beijing, and even a <a href="http://flamingoeda.com/" target="_blank" rel="external">Hackerspace</a>! My lack of Chinese might be an obstacle at the Hackerspace, but if I have some time I’ll go check it out.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>I’m mostly posting this for my own future reference, but if you’d like to get a feeling for the Chinese expat experience, or how to do bu]]>
+    </summary>
+    
+      <category term="blogroll" scheme="http://code.joshpollak.com/tags/blogroll/"/>
+    
+      <category term="blogs" scheme="http://code.joshpollak.com/tags/blogs/"/>
+    
+      <category term="china" scheme="http://code.joshpollak.com/tags/china/"/>
+    
+      <category term="forum" scheme="http://code.joshpollak.com/tags/forum/"/>
+    
+      <category term="links" scheme="http://code.joshpollak.com/tags/links/"/>
+    
+      <category term="linux" scheme="http://code.joshpollak.com/tags/linux/"/>
+    
+      <category term="motorcycle" scheme="http://code.joshpollak.com/tags/motorcycle/"/>
+    
+      <category term="China" scheme="http://code.joshpollak.com/categories/China/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Check Out the Size of Chef Dong's Braised Seacucumber]]></title>
+    <link href="http://code.joshpollak.com/2011/03/13/check-out-the-size-of-chef-dongs-braised-seacucumber/"/>
+    <id>http://code.joshpollak.com/2011/03/13/check-out-the-size-of-chef-dongs-braised-seacucumber/</id>
+    <published>2011-03-14T03:52:38.000Z</published>
+    <updated>2015-10-01T19:11:30.000Z</updated>
+    <content type="html"><![CDATA[<p>No really, its a really big restaurant:</p>
+<p><a href="http://www.offthehill.org/wp-content/uploads/2011/03/Chef-Dongs-Braised-Seacucumber.jpg" target="_blank" rel="external"><img src="http://www.offthehill.org/wp-content/uploads/2011/03/Chef-Dongs-Braised-Seacucumber.jpg" alt="" title="Chef Dong&#039;s Braised Seacucumber"></a></p>
+<p>I’ve got to apologize for the cultural insensitivity, because I know its inappropriate, but I find the name of this restaurant <em>really, really</em> funny.</p>
+<p>I admit it, I really like junior-high level humor. “Your mom” jokes and penile humor <em>never</em> get old. Which is pretty amazing, considering the prevalence of surnames in China which happen to coincide with humorously euphemistic English words for male genitalia. You would think China would serve as a 1.3 billion person strong form of <a href="http://en.wikipedia.org/wiki/Exposure_therapy" target="_blank" rel="external">exposure therapy</a> for me, but so far it hasn’t been very effective.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>No really, its a really big restaurant:</p>
+<p><a href="http://www.offthehill.org/wp-content/uploads/2011/03/Chef-Dongs-Braised-Seacucumb]]>
+    </summary>
+    
+      <category term="beijing" scheme="http://code.joshpollak.com/tags/beijing/"/>
+    
+      <category term="china" scheme="http://code.joshpollak.com/tags/china/"/>
+    
+      <category term="cultural sensitivity" scheme="http://code.joshpollak.com/tags/cultural-sensitivity/"/>
+    
+      <category term="dong" scheme="http://code.joshpollak.com/tags/dong/"/>
+    
+      <category term="photography" scheme="http://code.joshpollak.com/tags/photography/"/>
+    
+      <category term="restaurant" scheme="http://code.joshpollak.com/tags/restaurant/"/>
+    
+      <category term="seacucumber" scheme="http://code.joshpollak.com/tags/seacucumber/"/>
+    
+      <category term="travel" scheme="http://code.joshpollak.com/tags/travel/"/>
+    
+      <category term="China" scheme="http://code.joshpollak.com/categories/China/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[The Obligatory Smog Photo]]></title>
+    <link href="http://code.joshpollak.com/2011/03/13/the-obligatory-smog-photo/"/>
+    <id>http://code.joshpollak.com/2011/03/13/the-obligatory-smog-photo/</id>
+    <published>2011-03-14T03:34:06.000Z</published>
+    <updated>2015-10-01T19:57:20.000Z</updated>
+    <content type="html"><![CDATA[<p>There’s nothing special about this photo, the smog level wasn’t particularly high Saturday (it was ‘320’ according to the <a href="http://beijing.usembassy-china.org.cn/070109air.html" target="_blank" rel="external">US Embassy smog meter</a> and their <a href="http://twitter.com/beijingair" target="_blank" rel="external">twitter feed</a>, but it gives you an idea what the view down the street on a typical day in Beijing looks like:</p>
+<p><a href="http://www.offthehill.org/wp-content/uploads/2011/03/Obligatory-Smog-Photo.jpg" target="_blank" rel="external"><img src="http://www.offthehill.org/wp-content/uploads/2011/03/Obligatory-Smog-Photo.jpg" alt="" title="Obligatory Smog Photo"></a></p>
+<p>Except on rare “Blue Sky Days”, the sky pretty much always has that white hazy look to it.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>There’s nothing special about this photo, the smog level wasn’t particularly high Saturday (it was ‘320’ according to the <a href="http:/]]>
+    </summary>
+    
+      <category term="beijing" scheme="http://code.joshpollak.com/tags/beijing/"/>
+    
+      <category term="china" scheme="http://code.joshpollak.com/tags/china/"/>
+    
+      <category term="photo" scheme="http://code.joshpollak.com/tags/photo/"/>
+    
+      <category term="smog" scheme="http://code.joshpollak.com/tags/smog/"/>
+    
+      <category term="China" scheme="http://code.joshpollak.com/categories/China/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Friday Update]]></title>
+    <link href="http://code.joshpollak.com/2011/03/11/friday-update/"/>
+    <id>http://code.joshpollak.com/2011/03/11/friday-update/</id>
+    <published>2011-03-11T07:52:38.000Z</published>
+    <updated>2015-10-01T18:38:42.000Z</updated>
+    <content type="html"><![CDATA[<p>Sharon and I went for a nice lunch, it was as fancy as any “normal dinner out” in Boston, and the total cost was 54rmb, or about $8. Still, <em>tai gui le!</em> (too expensive!) The menu offered some intriguing dishes, such as <em>Mushroom Rape</em>, but we didn’t try any this time.</p>
+<p>No photos today since I didn’t get out much.</p>
+<p>I think the stress of traveling is making me sick, I’m not feeling too well.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Sharon and I went for a nice lunch, it was as fancy as any “normal dinner out” in Boston, and the total cost was 54rmb, or about $8. Stil]]>
+    </summary>
+    
+      <category term="China" scheme="http://code.joshpollak.com/categories/China/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[First Days in China]]></title>
+    <link href="http://code.joshpollak.com/2011/03/10/first-days-in-china/"/>
+    <id>http://code.joshpollak.com/2011/03/10/first-days-in-china/</id>
+    <published>2011-03-10T09:49:51.000Z</published>
+    <updated>2015-10-01T18:38:42.000Z</updated>
+    <content type="html"><![CDATA[<p>Here is a brief recap of my first days in China…</p>
+<h3 id="Tuesday">Tuesday</h3><p>Jet lag has me waking up really early. Also, Chinese mattresses are rock hard, which seems odd but I guess its normal here, The mattress in the old apartment was the same. We need to find a memory foam mattress cover because its pretty rough sleeping on this thing.</p>
+<p>In the morning we went to the PSB (Public Safety Bureau) to register. All visitors to China who are not staying in hotels or other official locations must register with the local PSB within 24 hours of arrival, regardless of how long they are staying. It was pretty painless though.</p>
+<p>We was running late, so rather than going back home, I got parked at a cafe for a few hours where I was able to get some work done on wifi. On the way there we walked past a shop with a painting of Obama with a rabbit:</p>
+<p><a href="http://www.offthehill.org/wp-content/uploads/2011/03/IMG_20110308_150940.jpg" target="_blank" rel="external"><img src="http://www.offthehill.org/wp-content/uploads/2011/03/IMG_20110308_150940-1024x764.jpg" alt="" title="Obama with a Rabbit"></a></p>
+<a id="more"></a>
+<h3 id="Wednesday">Wednesday</h3><p>Still waking up early… the bed is still rock hard…</p>
+<p>We went to the supermarket today, which always an experience. Highlights included a live, <em>large</em> turtle in the seafood section, and oddly enough in the bread section there was a package labeled “Fish Hamburg” and a matching one called “Pork Hamburg”. I didn’t get photos, but I’ll try to next time.</p>
+<p>In the evening we went to a neighborhood restaurant specializing in Peking Duck. A whole duck plus fixings and a vegetable side cost 99 rmb, or almost exactly $15. I am worried we won’t be able to afford eating out so lavishly on a regular basis.</p>
+<h3 id="Thursday">Thursday</h3><p>Still waking up early… the bed is <em>still</em> rock hard…</p>
+<p>I’m trying to figure out the work schedule. If I get online at 8 or 9, my co-workers are often still online and I can chat with them and email back and forth, sometimes as late as noon or 1 pm (midnight in Boston). If I work during the day, I can get a lot of work done, but never go outside. Sharon gets home early, so spending the evening working kind of sucks, but I need to be online from at least 10-11, depending on how meetings go.</p>
+<p>I think the best thing will be to get in the habit of working from 10-5, taking a few hours off, then getting back online at 10 pm for an hour or so. That will leave 5 hours free in the early evening.</p>
+<p>… haven’t been outside today yet…</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Here is a brief recap of my first days in China…</p>
+<h3 id="Tuesday">Tuesday</h3><p>Jet lag has me waking up really early. Also, Chinese mattresses are rock hard, which seems odd but I guess its normal here, The mattress in the old apartment was the same. We need to find a memory foam mattress cover because its pretty rough sleeping on this thing.</p>
+<p>In the morning we went to the PSB (Public Safety Bureau) to register. All visitors to China who are not staying in hotels or other official locations must register with the local PSB within 24 hours of arrival, regardless of how long they are staying. It was pretty painless though.</p>
+<p>We was running late, so rather than going back home, I got parked at a cafe for a few hours where I was able to get some work done on wifi. On the way there we walked past a shop with a painting of Obama with a rabbit:</p>
+<p><a href="http://www.offthehill.org/wp-content/uploads/2011/03/IMG_20110308_150940.jpg"><img src="http://www.offthehill.org/wp-content/uploads/2011/03/IMG_20110308_150940-1024x764.jpg" alt="" title="Obama with a Rabbit"></a></p>]]>
+    
+    </summary>
+    
+      <category term="China" scheme="http://code.joshpollak.com/categories/China/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Getting to China]]></title>
+    <link href="http://code.joshpollak.com/2011/03/10/getting-to-china/"/>
+    <id>http://code.joshpollak.com/2011/03/10/getting-to-china/</id>
+    <published>2011-03-10T08:47:15.000Z</published>
+    <updated>2015-10-01T19:11:30.000Z</updated>
+    <content type="html"><![CDATA[<p>For everyone who has been asking, I’ll try and write semi-regularly about what life in China is like, and you should be able to find all of those posts in the <a href="http://www.offthehill.org/articles/category/china/" target="_blank" rel="external">China category</a>.</p>
+<p>The trip over went smoothly, but was grueling since I had to change once in Detroit and once in Tokyo. I had never been to either airport, and both were clean and nice. The Detroit airport has an indoor tram system which is pretty cool.</p>
+<p>I left at 9 am on Sunday and arrived at 10 pm on Monday. If you subtract the 13 hour time difference this works out to about 24 hours of pure travel, most of which was spent inside one plane or another. I  got an external USB battery pack for my phone and loaded its MicroSD card with 4 movies. This worked great and lasted for about 3/4 of the flight over the Pacific.</p>
+<p>For those who are into such things, I saw a bunch of Totoro in a Japanese gift shop at the airport:</p>
+<p><a href="http://www.offthehill.org/wp-content/uploads/2011/03/IMG_20110307_165632.jpg" target="_blank" rel="external"><img src="http://www.offthehill.org/wp-content/uploads/2011/03/IMG_20110307_165632-1024x764.jpg" alt="" title="Totoro in the Tokyo-Narita airport"></a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>For everyone who has been asking, I’ll try and write semi-regularly about what life in China is like, and you should be able to find all ]]>
+    </summary>
+    
+      <category term="China" scheme="http://code.joshpollak.com/categories/China/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Urban Homesteading]]></title>
+    <link href="http://code.joshpollak.com/2011/02/28/urban-homesteading/"/>
+    <id>http://code.joshpollak.com/2011/02/28/urban-homesteading/</id>
+    <published>2011-03-01T00:49:39.000Z</published>
+    <updated>2015-10-01T19:57:20.000Z</updated>
+    <content type="html"><![CDATA[<p>I always thought of urban homesteading as <a href="http://en.wikipedia.org/wiki/Squatting#Urban_homesteading" target="_blank" rel="external">people squatting in abandoned buildings</a>, making improvements, and generally acting as if they were responsible for the place long enough that the government allowed them to take ownership.</p>
+<p>According to wikipedia, <a href="http://en.wikipedia.org/wiki/Urban_Homesteading" target="_blank" rel="external">it can actually mean a variety of things</a>, including self sufficient urban agriculture, and government programs to get people to move into houses in the city.</p>
+<p>All of these definitions seem in general to be positive, heroic actions, which is why it is a shame that I read on the <a href="https://www.eff.org/deeplinks/2011/02/riding-fences-urban-homestead-trademark-complaints" target="_blank" rel="external">EFF website</a> about a trademark dispute with the Dervaes Institute about this phrase.</p>
+<p>The Institute has managed to trademark this term, despite its common use in many settings for quite some time, and then used take-down notices on Facebook and other sites to prevent other people from using this term.</p>
+<p>Considering how widespread and common the term is, this seems completely ridiculous. For example, see this books:</p>
+<ul>
+<li><a href="http://www.amazon.com/gp/product/161608135X?ie=UTF8&amp;tag=wwwoffthehill-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=161608135X" target="_blank" rel="external">The Ultimate Guide to Homesteading: An Encyclopedia of Independent Living</a><img src="http://www.assoc-amazon.com/e/ir?t=wwwoffthehill-20&amp;l=as2&amp;o=1&amp;a=161608135X" alt=""></li>
+<li><a href="http://www.amazon.com/gp/product/1934170100?ie=UTF8&amp;tag=wwwoffthehill-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1934170100" target="_blank" rel="external">The Urban Homestead (Expanded &amp; Revised Edition): Your Guide to Self-Sufficient Living in the Heart of the City</a><img src="http://www.assoc-amazon.com/e/ir?t=wwwoffthehill-20&amp;l=as2&amp;o=1&amp;a=1934170100" alt=""></li>
+<li><a href="http://www.amazon.com/gp/product/161608054X?ie=UTF8&amp;tag=wwwoffthehill-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=161608054X" target="_blank" rel="external">Urban Homesteading: Heirloom Skills for Sustainable Living</a><img src="http://www.assoc-amazon.com/e/ir?t=wwwoffthehill-20&amp;l=as2&amp;o=1&amp;a=161608054X" alt=""></li>
+</ul>
+<p>Today is the <a href="http://www.facebook.com/event.php?eid=184707531568502" target="_blank" rel="external">Urban Homesteaders Day of Action</a>, to protest the Dervaes Institute’s attempt to commandeer this phrase.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>I always thought of urban homesteading as <a href="http://en.wikipedia.org/wiki/Squatting#Urban_homesteading" target="_blank" rel="extern]]>
+    </summary>
+    
+      <category term="Politics" scheme="http://code.joshpollak.com/categories/Politics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Snow Crash vs The Diamond Age]]></title>
+    <link href="http://code.joshpollak.com/2011/02/27/snow-crash-vs-the-diamond-age/"/>
+    <id>http://code.joshpollak.com/2011/02/27/snow-crash-vs-the-diamond-age/</id>
+    <published>2011-02-28T02:42:04.000Z</published>
+    <updated>2015-10-01T19:57:20.000Z</updated>
+    <content type="html"><![CDATA[<p>I <em>hated</em> Neil Stephenson’s <a href="http://www.amazon.com/gp/product/0553380958?ie=UTF8&amp;tag=wwwoffthehill-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0553380958" target="_blank" rel="external">Snow Crash</a><img src="http://www.assoc-amazon.com/e/ir?t=wwwoffthehill-20&amp;l=as2&amp;o=1&amp;a=0553380958" alt="">. Its trite, its crass, and it reads like an action movie elevator pitch. <em>Hiro Protagonist</em> isn’t a clever literary joke. Its a stupid name made up because the author couldn’t think of something better. Its so bad I want to wretch thinking about it.</p>
+<p>I also hate all the fan boys who think the virtual reality cyberpunk thing is so original. If you want to be cyberpunk, go read William Gibson’s <a href="http://www.amazon.com/gp/product/0441012035?ie=UTF8&amp;tag=wwwoffthehill-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0441012035" target="_blank" rel="external">Neuromancer</a><img src="http://www.assoc-amazon.com/e/ir?t=wwwoffthehill-20&amp;l=as2&amp;o=1&amp;a=0441012035" alt=""> which invented the genre 8 years before <em>Snow Crash</em> was written.</p>
+<p>Don’t get me wrong though, I don’t hate Stephenson. Although <em>Snow Crash</em> did put me off his books for more than a decade, I am just now wrapping up <a href="http://www.amazon.com/gp/product/0553380966?ie=UTF8&amp;tag=wwwoffthehill-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0553380966" target="_blank" rel="external">The Diamond Age</a><img src="http://www.assoc-amazon.com/e/ir?t=wwwoffthehill-20&amp;l=as2&amp;o=1&amp;a=0553380966" alt="">. And I love it, for all the reasons I hated <em>Snow Crash</em>.</p>
+<p>Unlike the earlier book, <em>The Diamond Age</em> (which is only 3 years younger) is original, the characters have depth, and the pace  doesn’t make the reader feel like they are watching a cheap action movie. And although <em>Hackworth</em> is a bit of an obvious joke, the character names are all reasonably believable.</p>
+<p><em>The Diamond Age</em> has broken my aversion to Stephenson’s novels, and I look forward to reading more of them. As long as Hiro Protagonist doesn’t make an appearance.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>I <em>hated</em> Neil Stephenson’s <a href="http://www.amazon.com/gp/product/0553380958?ie=UTF8&amp;tag=wwwoffthehill-20&amp;linkCode=as2]]>
+    </summary>
+    
+      <category term="books" scheme="http://code.joshpollak.com/tags/books/"/>
+    
+      <category term="novel" scheme="http://code.joshpollak.com/tags/novel/"/>
+    
+      <category term="reading" scheme="http://code.joshpollak.com/tags/reading/"/>
+    
+      <category term="Everything Else" scheme="http://code.joshpollak.com/categories/Everything-Else/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Aperture 3 Freezes on Shutdown]]></title>
+    <link href="http://code.joshpollak.com/2011/02/27/aperture-3-freezes-on-shutdown/"/>
+    <id>http://code.joshpollak.com/2011/02/27/aperture-3-freezes-on-shutdown/</id>
+    <published>2011-02-28T02:22:16.000Z</published>
+    <updated>2015-10-01T19:11:30.000Z</updated>
+    <content type="html"><![CDATA[<p>Ever since I upgraded my main Aperture library from version 2 format to version 3, I have been having a problem when exiting Aperture where it would get stuck “updating information for sharing previews”. It would sit forever and never finish. I found this happened whenever I made adjustments to an image, but if I just opened the library and immediately quit, I wouldn’t have this problem. I found <a href="http://discussions.info.apple.com/thread.jspa?threadID=2386221&amp;tstart=0" target="_blank" rel="external">many people</a> were having the same problem too.</p>
+<p>For me, the solution was to use Apertures “Rebuild Library” option, which seems to have fixed the problem.</p>
+<p>To do this, follow these steps…</p>
+<a id="more"></a>
+<p><strong>First Backup your Library</strong>!!!</p>
+<p>Ok, now that you’ve done that, hold the <em>Option</em> and <em>Command</em> keys down when starting Aperture. You should see a dialog box like this:</p>
+<p><a href="http://www.offthehill.org/wp-content/uploads/2011/02/Screen-shot-2011-02-27-at-9.06.28-PM.png" target="_blank" rel="external"><img src="http://www.offthehill.org/wp-content/uploads/2011/02/Screen-shot-2011-02-27-at-9.06.28-PM-300x170.png" alt="" title="Aperture First Aid Dialog"></a></p>
+<p>First run the “Repair Permissions” option, since it can’t hurt. You will need an administrator password to your computer, but the actual repair is pretty painless.</p>
+<p>Once that is done, quit Aperture and restart, again holding down the <em>Option</em> and <em>Command</em> keys.</p>
+<p>This time, choose “Repair Database”. This option is less dangerous than the “Rebuild Database” option. In my case, Aperture immediately detected that there were problems that could only be repaired with the “Rebuild” option, so I allowed it to do the rebuild.</p>
+<p>Once the Rebuild was done, which only took a few minutes, everything worked great, and Aperture has been happy every since.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Ever since I upgraded my main Aperture library from version 2 format to version 3, I have been having a problem when exiting Aperture where it would get stuck “updating information for sharing previews”. It would sit forever and never finish. I found this happened whenever I made adjustments to an image, but if I just opened the library and immediately quit, I wouldn’t have this problem. I found <a href="http://discussions.info.apple.com/thread.jspa?threadID=2386221&amp;tstart=0">many people</a> were having the same problem too.</p>
+<p>For me, the solution was to use Apertures “Rebuild Library” option, which seems to have fixed the problem.</p>
+<p>To do this, follow these steps…</p>]]>
+    
+    </summary>
+    
+      <category term="aperture" scheme="http://code.joshpollak.com/tags/aperture/"/>
+    
+      <category term="apple" scheme="http://code.joshpollak.com/tags/apple/"/>
+    
+      <category term="database" scheme="http://code.joshpollak.com/tags/database/"/>
+    
+      <category term="freeze" scheme="http://code.joshpollak.com/tags/freeze/"/>
+    
+      <category term="photography" scheme="http://code.joshpollak.com/tags/photography/"/>
+    
+      <category term="repair" scheme="http://code.joshpollak.com/tags/repair/"/>
+    
+      <category term="Art" scheme="http://code.joshpollak.com/categories/Art/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[MacFUSE for 64-bit Snow Leopard]]></title>
+    <link href="http://code.joshpollak.com/2010/12/31/macfuse-for-64-bit-snow-leopard/"/>
+    <id>http://code.joshpollak.com/2010/12/31/macfuse-for-64-bit-snow-leopard/</id>
+    <published>2010-12-31T16:01:39.000Z</published>
+    <updated>2015-10-01T19:57:20.000Z</updated>
+    <content type="html"><![CDATA[<p><strong>UPDATE</strong>: _<strong>OS X Lion</strong> users, according to <a href="http://groups.google.com/group/macfuse/browse_thread/thread/217a91cb665dfab5" title="this thread" target="_blank" rel="external">this thread</a> there is a new project called OSXFUSE that picks up where MacFuse left off. The project incorporates the source code below and already supports OS X Lion natively. The project is just getting started, but a beta binary release is promised in the next few days. You can find more information at the <a href="http://osxfuse.github.com/" title="project homepage" target="_blank" rel="external">project homepage</a> (not online yet) or find the source code on <a href="https://github.com/osxfuse" title="github" target="_blank" rel="external">github</a>._</p>
+<h3 id="So_What_Is_The_Story?">So What Is The Story?</h3><p>If you would like to be able to use MacFUSE on 64-bit Snow Leopard, you may have noticed a lot of mis-information on the net. In short, all of the latest official MacFUSE releases, including both <strong>2.0.3</strong> and the <strong>2.1.7 beta</strong> are not compatible with 64-bit Snow Leopard.  My understanding is that these releases will work with 64-bit Leopard, or with 32 bit Snow Leopard, but I cannot confirm this.</p>
+<p>This article describes the current situation, and provides usable binary and source packages to download.</p>
+<a id="more"></a>
+<p>A company called Tuxera has made the necessary modifications to MacFUSE, and has published the source code as an un-official beta they call <strong>2.1.9</strong>. As of write now, the best source of information for this build can be found at this MacFUSE Google Groups thread:</p>
+<p><a href="http://groups.google.com/group/macfuse/t/9e5ec92932f27f46" target="_blank" rel="external">Unofficial MacFUSE 2.1.7 release for Mac OS X 10.6 (32/64-bit)</a></p>
+<h3 id="Just_Give_Me_Something_To_Install!">Just Give Me Something To Install!</h3><p>If you trust me and would just like a working version of MacFUSE to install, you can download an image I compiled myself: <a href="http://www.offthehill.org/wp-content/uploads/2010/12/macfuse-core-10.5-2.1.9.zip" target="_blank" rel="external">macfuse-core-10.5-2.1.9.zip</a>.</p>
+<h3 id="I_Want_To_Compile_It_Myself">I Want To Compile It Myself</h3><p>You can download the original source code <a href="http://www.tuxera.com/mac/macfuse-rebel-2.1.9-src.tar.bz2" target="_blank" rel="external">directly from Tuxera</a> or from <a href="http://www.offthehill.org/wp-content/uploads/2010/12/macfuse-rebel-2.1.9-src.tar.bz2" target="_blank" rel="external">my local mirror</a>.</p>
+<p>You will obviously need XCode installed to compile MacFUSE. Once you have downloaded the source, open a terminal and run the following commands:</p>
+<p><code>Downloads $ cd macfuse-rebel-2.1.9
+macfuse-rebel-2.1.9 $ cd core/
+core $ ./macfuse_buildtool.sh -t smalldist</code></p>
+<p>It generates a directory in the /tmp directory called “macfuse-core-10.5-2.1.9”. Inside this directory is a .pkg file called “MacFUSE Core.pkg”. Just double click this file to install, and MacFUSE will be installed. Then, once installed, you can install TrueCrypt or whatever Fuse implementation you need, and it should work fine.</p>
+<h3 id="The_Standard_Disclaimer">The Standard Disclaimer</h3><p>I make no claims about how stable this code is, and I have no idea about anything in the MacFUSE internals, so please report any problems you have with this version of the code to the <a href="http://groups.google.com/group/macfuse" target="_blank" rel="external">MacFUSE Google Group</a>.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><strong>UPDATE</strong>: _<strong>OS X Lion</strong> users, according to <a href="http://groups.google.com/group/macfuse/browse_thread/thread/217a91cb665dfab5" title="this thread">this thread</a> there is a new project called OSXFUSE that picks up where MacFuse left off. The project incorporates the source code below and already supports OS X Lion natively. The project is just getting started, but a beta binary release is promised in the next few days. You can find more information at the <a href="http://osxfuse.github.com/" title="project homepage">project homepage</a> (not online yet) or find the source code on <a href="https://github.com/osxfuse" title="github">github</a>._</p>
+<h3 id="So_What_Is_The_Story?">So What Is The Story?</h3><p>If you would like to be able to use MacFUSE on 64-bit Snow Leopard, you may have noticed a lot of mis-information on the net. In short, all of the latest official MacFUSE releases, including both <strong>2.0.3</strong> and the <strong>2.1.7 beta</strong> are not compatible with 64-bit Snow Leopard.  My understanding is that these releases will work with 64-bit Leopard, or with 32 bit Snow Leopard, but I cannot confirm this.</p>
+<p>This article describes the current situation, and provides usable binary and source packages to download.</p>]]>
+    
+    </summary>
+    
+      <category term="64bit" scheme="http://code.joshpollak.com/tags/64bit/"/>
+    
+      <category term="OS X" scheme="http://code.joshpollak.com/tags/OS-X/"/>
+    
+      <category term="beta" scheme="http://code.joshpollak.com/tags/beta/"/>
+    
+      <category term="compile" scheme="http://code.joshpollak.com/tags/compile/"/>
+    
+      <category term="mac" scheme="http://code.joshpollak.com/tags/mac/"/>
+    
+      <category term="macfuse" scheme="http://code.joshpollak.com/tags/macfuse/"/>
+    
+      <category term="snow leopard" scheme="http://code.joshpollak.com/tags/snow-leopard/"/>
+    
+      <category term="truecrypt" scheme="http://code.joshpollak.com/tags/truecrypt/"/>
+    
+      <category term="tuxera" scheme="http://code.joshpollak.com/tags/tuxera/"/>
+    
+      <category term="Tech" scheme="http://code.joshpollak.com/categories/Tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[My Personal Fears]]></title>
+    <link href="http://code.joshpollak.com/2010/10/07/my-personal-fears/"/>
+    <id>http://code.joshpollak.com/2010/10/07/my-personal-fears/</id>
+    <published>2010-10-07T16:56:43.000Z</published>
+    <updated>2015-10-01T19:57:20.000Z</updated>
+    <content type="html"><![CDATA[<ol>
+<li>A government that keeps its citizens through hazy reports of violence by “outsiders”</li>
+<li>The rise of China and decline of the US</li>
+<li>Fanatical, Conspiracy Theorist Right-wingers</li>
+<li>Spiders</li>
+<li>Global Warming</li>
+<li>An unnoticed asteroid hitting the planet and destroying civilization</li>
+<li>The possibility of a major solar flare destroying the national power-grid, which could take months to years to repair, thereby destroying civilization</li>
+<li>Bears</li>
+<li>Nuclear terrorists</li>
+<li>Not saving enough for retirement</li>
+</ol>
+]]></content>
+    <summary type="html">
+    <![CDATA[<ol>
+<li>A government that keeps its citizens through hazy reports of violence by “outsiders”</li>
+<li>The rise of China and decline of the ]]>
+    </summary>
+    
+      <category term="Politics" scheme="http://code.joshpollak.com/tags/Politics/"/>
+    
+      <category term="bears" scheme="http://code.joshpollak.com/tags/bears/"/>
+    
+      <category term="china" scheme="http://code.joshpollak.com/tags/china/"/>
+    
+      <category term="fear" scheme="http://code.joshpollak.com/tags/fear/"/>
+    
+      <category term="global warming" scheme="http://code.joshpollak.com/tags/global-warming/"/>
+    
+      <category term="government" scheme="http://code.joshpollak.com/tags/government/"/>
+    
+      <category term="science" scheme="http://code.joshpollak.com/tags/science/"/>
+    
+      <category term="spiders" scheme="http://code.joshpollak.com/tags/spiders/"/>
+    
+      <category term="Everything Else" scheme="http://code.joshpollak.com/categories/Everything-Else/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Use a Mac to Repair a Sansa Clip with the 'Not enough space for Music DB, please free 30 mb' error]]></title>
+    <link href="http://code.joshpollak.com/2010/09/28/repair-a-sansa-clip-c/"/>
+    <id>http://code.joshpollak.com/2010/09/28/repair-a-sansa-clip-c/</id>
+    <published>2010-09-29T01:45:19.000Z</published>
+    <updated>2015-10-01T19:57:20.000Z</updated>
+    <content type="html"><![CDATA[<p>First of all, the fact that you need to leave free space on your Clip is the most irritating issue I’ve ever seen on a modern electronics device. I’m sure there are thousands of people out there who have thrown their Clips in the garbage because of this.</p>
+<p>Anyway, here is the situation:</p>
+<p>You’ve got the “<em>Not enough space for Music DB, please free 30 mb</em>“ message on your Sansa Clip.<br>You have a Mac</p>
+<p>Read on for the fix.</p>
+<a id="more"></a>
+<p>Here is the fix:</p>
+<p>Open Disk Utility<br>Click on the Sansa Clip listing on the left</p>
+<ul>
+<li>Not the disk itself, the DEVICE.<br>Click the ‘Partition’ tab<br>Under Volume Scheme, choose ‘1 Partition’<br>Click the ‘Options…’ button<br>Choose ‘Master Boot Record’, then click ok <em>(this is IMPORTANT!)</em><br>Click the drop down next to ‘Format:’ and choose “MS-DOS (FAT)”<br>Click Apply</li>
+</ul>
+<p>When this is complete, you can eject the disk if needed, and your clip should be back to normal.</p>
+<p>I found that by default the formatting process doesn’t use the ‘Master Boot Record’ partition table system, so even though I had formatted the disk repeatedly, it wasn’t working correctly till I manually specified to use an MBR.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>First of all, the fact that you need to leave free space on your Clip is the most irritating issue I’ve ever seen on a modern electronics device. I’m sure there are thousands of people out there who have thrown their Clips in the garbage because of this.</p>
+<p>Anyway, here is the situation:</p>
+<p>You’ve got the “<em>Not enough space for Music DB, please free 30 mb</em>“ message on your Sansa Clip.<br>You have a Mac</p>
+<p>Read on for the fix.</p>]]>
+    
+    </summary>
+    
+      <category term="clip" scheme="http://code.joshpollak.com/tags/clip/"/>
+    
+      <category term="format" scheme="http://code.joshpollak.com/tags/format/"/>
+    
+      <category term="mac" scheme="http://code.joshpollak.com/tags/mac/"/>
+    
+      <category term="partition" scheme="http://code.joshpollak.com/tags/partition/"/>
+    
+      <category term="sansa" scheme="http://code.joshpollak.com/tags/sansa/"/>
+    
+      <category term="Tech" scheme="http://code.joshpollak.com/categories/Tech/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[CrashPlan using too much memory on Mac OS X]]></title>
+    <link href="http://code.joshpollak.com/2010/05/04/crashplan-using-too-much-memory-on-mac-os-x/"/>
+    <id>http://code.joshpollak.com/2010/05/04/crashplan-using-too-much-memory-on-mac-os-x/</id>
+    <published>2010-05-04T19:57:58.000Z</published>
+    <updated>2015-10-01T19:11:30.000Z</updated>
+    <content type="html"><![CDATA[<p>If you have noticed CrashPlan is using too much memory on your 64 bit Mac, one solution might be to run its server process in 32 bit mode. I’ve tried this, and so far it hasn’t caused any problems, and definitely seems to keep memory usage lower.</p>
+<p>This requires a bit of hacking, but its not too terrible.</p>
+<a id="more"></a>
+<p>Start by opening your ‘Terminal’ program. You can find it in <em>/Applications/Utilities/Terminal</em></p>
+<p>At the command prompt, type this (all on one line):</p>
+<p><code>sudo nano /Library/LaunchDaemons/com.crashplan.engine.plist</code></p>
+<p>Find these two lines:</p>
+<p>&lt;string&gt;-Dapp=CrashPlanService&lt;/string&gt;<br>&lt;string&gt;-Xmn10m&lt;/string&gt;</p>
+<p>And insert a line so that it now looks like this:</p>
+<p>&lt;string&gt;-Dapp=CrashPlanService&lt;/string&gt;<br>&lt;string&gt;-d32&lt;/string&gt;<br>&lt;string&gt;-Xmn10m&lt;/string&gt;</p>
+<p><em>Optional:</em> A little further down the file, you will see this line:</p>
+<p>&lt;string&gt;-Xmx512m&lt;/string&gt;</p>
+<p>You can change that line to be:</p>
+<p>&lt;string&gt;-Xmx150m&lt;/string&gt;</p>
+<p>This will restrict CrashPlan to <em>AT MOST</em> 150 mb of ram. <a href="https://crashplan.zendesk.com/entries/116068" target="_blank" rel="external">According to CrashPlan tech support</a> this is perfectly safe (and you could go even lower if aren’t backing up 120gb like I am), but you might need to monitor CrashPlan for out-of-memory errors and such. If you see errors, just change that 150 back to a 512, and everything should be fine.</p>
+<p>Now save the file and exit by pressing “Control-O”, Enter, then “Control-X”.</p>
+<p>You are almost done.</p>
+<p>The last step is to reload and relaunch CrashPlan with these commands:</p>
+<p><code>sudo launchctl unload /Library/LaunchDaemons/com.crashplan.engine.plist</code><br><code>sudo launchctl load /Library/LaunchDaemons/com.crashplan.engine.plist</code></p>
+<p>Now CrashPlan should be using much less memory.</p>
+<p><strong>Update:</strong> I neglected to point out <em>HOW</em> to check how much memory Crashplan is using. You can use Activity Monitor to do this, you can find it at <em>/Applications/Utilities/Activity Monitor</em>. Look for a process called ‘java’, started by ‘root’. There might be more than one ‘java’, so you might have to do some digging to figure out which one is Crashplan. I can’t find a specific way in Activity Monitor to check this, but one hint is to close any applications you have running and see if other ‘java’ instances go away. In my case, I normally just have the ‘Crashplan’ java running.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>If you have noticed CrashPlan is using too much memory on your 64 bit Mac, one solution might be to run its server process in 32 bit mode. I’ve tried this, and so far it hasn’t caused any problems, and definitely seems to keep memory usage lower.</p>
+<p>This requires a bit of hacking, but its not too terrible.</p>]]>
+    
+    </summary>
+    
+      <category term="backup" scheme="http://code.joshpollak.com/tags/backup/"/>
+    
+      <category term="Tech" scheme="http://code.joshpollak.com/categories/Tech/"/>
+    
+  </entry>
+  
+</feed>
