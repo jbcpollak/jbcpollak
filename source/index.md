@@ -1,0 +1,28 @@
+title: Sample Code and Tech Blog
+date: 2015-10-01 10:28:00
+---
+This site has my sample code and random blog posts about technology.
+
+## Interesting Coding Challenges
+
+Here are some example projects I've written as demonstrations for various companies.
+
+*  [ReactJS-Based Depression Screener](https://github.com/jbcpollak/react-depression-screener)
+*  [A NodeJS Service to run Javascript in Docker Containers](https://github.com/jbcpollak/docker-microservices)
+*  [C++ Blob Analysis Exercise](https://github.com/jbcpollak/blob_boundaries)
+
+## Interesting Technical Articles
+
+*  [Java: Static Variables are WRONG (Almost Always)](/2011/06/03/java-static-variables-are-wrong-almost-always/)
+
+## My Resume
+
+I used the [jsonresume.org](http://jsonresume.org/) project to generate my resume. If you just want to take a peak, download it here:
+
+*  [PDF](/CV - Joshua Chaitin-Pollak.pdf)
+
+If you'd like to compile your own copy of my resume, or just see how it works, here are the relevant repositories:
+
+*  [My Resume Repo](https://github.com/jbcpollak/jbcpollak-resume)
+*  [One Page Theme](https://github.com/jbcpollak/jsonresume-theme-onepage)
+   I made a few tweaks to the theme to support multi-page printing
