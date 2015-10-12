@@ -35,6 +35,7 @@ Please don't create static mutables. _Especially_ Collections. In general, Colle
 Using statics can create very subtle bugs which will cause sustaining engineers days of pain. I know, because I've both created and hunted these bugs.
 
 If you would like more details, please read on...
+<!-- more -->
 
 ### Why Not Use Statics?
 

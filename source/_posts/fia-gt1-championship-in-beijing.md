@@ -3,8 +3,6 @@ id: 377
 categories:
   - China
 date: 2011-09-12 14:01:54
-photos:
-  - http://www.joshpollak.com/Cars/Racing/2011-FIA-GT1-Beijing/i-JS8KS5s/0/M/All-Alone-M.jpg
 tags:
   - Racing
   - FIA GT1
